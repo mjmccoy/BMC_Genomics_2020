@@ -1,0 +1,18 @@
+Human GeneID	Human Gene ID	HGNCID	Human Symbol	Species 2	Species 2 Species Gene ID	Species 2 Gene ID	Species 2 Gene Name  	DIOPT Score	Weighted Score	Rank	Best Score	Best Score Reverse	Prediction Derived From	
+NRXN1	9378	8008	NRXN1	Zebrafish	565531	ZDB-GENE-070206-1	nrxn1a	14	14.37	high	Yes	Yes	eggNOG, Hieranoid, Homologene, Inparanoid, OMA, OrthoDB, OrthoFinder, OrthoInspector, orthoMCL, Panther, Phylome, RoundUp, TreeFam, ZFIN
+NRXN1	9378	8008	NRXN1	Mouse	18189	1096391	Nrxn1	14	14.34	high	Yes	Yes	Compara, eggNOG, HGNC, Hieranoid, Homologene, Inparanoid, OMA, OrthoDB, OrthoFinder, OrthoInspector, orthoMCL, Panther, Phylome, RoundUp
+NRXN1	9378	8008	NRXN1	Worm	179503	WBGene00007799	nrx-1	13	12.87	high	Yes	Yes	eggNOG, Hieranoid, Homologene, Inparanoid, OMA, OrthoDB, OrthoFinder, OrthoInspector, orthoMCL, Panther, Phylome, RoundUp, TreeFam
+NRXN1	9378	8008	NRXN1	Fly	42646	FBgn0038975	Nrx-1	12	11.87	high	Yes	Yes	eggNOG, Hieranoid, Inparanoid, OMA, OrthoDB, OrthoFinder, OrthoInspector, orthoMCL, Panther, Phylome, RoundUp, TreeFam
+NRXN1	9378	8008	NRXN1	Rat	60391	628659	Nrxn1	8	8.66	high	Yes	Yes	HGNC, Hieranoid, Homologene, Inparanoid, OrthoDB, OrthoFinder, OrthoInspector, Panther
+NRXN1	9378	8008	NRXN1	Zebrafish	555686	ZDB-GENE-070206-3	nrxn1b	7	7.35	moderate	Yes_Adjusted	Yes	Compara, eggNOG, OrthoDB, OrthoFinder, Panther, Phylome, ZFIN
+NRXN1	9378	8008	NRXN1	Western clawed frog	100127647	XB-GENE-952913	nrxn1	7	6.9	high	Yes	Yes	Compara, eggNOG, Homologene, OrthoDB, OrthoFinder, Panther, TreeFam
+NRXN1	9378	8008	NRXN1	Mouse	18191	1096389	Nrxn3	4	3.81	moderate	No	No	eggNOG, OrthoDB, OrthoFinder, orthoMCL
+NRXN1	9378	8008	NRXN1	Mouse	18190	1096362	Nrxn2	4	3.81	moderate	No	No	eggNOG, OrthoDB, OrthoFinder, orthoMCL
+NRXN1	9378	8008	NRXN1	Zebrafish	558326	ZDB-GENE-070206-5	nrxn2a	4	3.81	moderate	No	No	eggNOG, OrthoDB, OrthoFinder, orthoMCL
+NRXN1	9378	8008	NRXN1	Zebrafish	563598	ZDB-GENE-070206-9	nrxn3a	4	3.81	moderate	No	No	eggNOG, OrthoDB, OrthoFinder, orthoMCL
+NRXN1	9378	8008	NRXN1	Zebrafish	560420	ZDB-GENE-070206-7	nrxn2b	3	2.91	low	No	No	eggNOG, OrthoDB, OrthoFinder
+NRXN1	9378	8008	NRXN1	Western clawed frog	100379902	XB-GENE-956823	nrxn3	3	2.91	low	No	No	eggNOG, OrthoDB, OrthoFinder
+NRXN1	9378	8008	NRXN1	Western clawed frog	100491218	XB-GENE-6039577	nrxn2	3	2.91	low	No	No	eggNOG, OrthoDB, OrthoFinder
+NRXN1	9378	8008	NRXN1	Zebrafish	570698	ZDB-GENE-070206-10	nrxn3b	3	2.91	low	No	No	OrthoDB, OrthoFinder, orthoMCL
+NRXN1	9378	8008	NRXN1	Rat	116508	620212	Nrxn3	2	2.01	low	No	No	OrthoDB, OrthoFinder
+NRXN1	9378	8008	NRXN1	Rat	116595	620211	Nrxn2	2	2.01	low	No	No	OrthoDB, OrthoFinder

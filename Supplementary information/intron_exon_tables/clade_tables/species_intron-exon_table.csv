@@ -1,0 +1,360 @@
+"","Species","Median gene length","Median exon length","Median intron length","Median number of exons","Number of genes","Clade","Taxon.ID"
+"1","Actinidia chinensis",7403,164,368,4,33044,"Plantae",1590841
+"2","Arabidopsis halleri",3090,158,104,4,32158,"Plantae",63677
+"3","Arabidopsis lyrata",2616,131,98,4,32667,"Plantae",81972
+"4","Aegilops tauschii",7646,139,138,3,39614,"Plantae",200361
+"5","Arabidopsis thaliana",3397,152,101,4,27628,"Plantae",3702
+"6","Amborella trichopoda",8408,137,394,2,27313,"Plantae",13333
+"7","Brachypodium distachyon",5540,155,142,3,34310,"Plantae",15368
+"8","Brassica napus",2556,142,95,3,101040,"Plantae",3708
+"9","Brassica oleracea",2316,137,98,3,59220,"Plantae",109376
+"10","Brassica rapa",2531,136,96,3,41018,"Plantae",3711
+"11","Beta vulgaris",7456,170,320,3,26521,"Plantae",3555
+"12","Capsicum annuum",5407,142,282,3,35845,"Plantae",4072
+"13","Coffea canephora",4775,158,209,4,25574,"Plantae",49390
+"14","Corchorus capsularis",3889,124,174,3,29356,"Plantae",210143
+"15","Cynara cardunculus",6456,145,339,4,26505,"Plantae",59895
+"16","Chondrus crispus",1198,588,117,1,9807,"Plantae",2769
+"17","Cyanidioschyzon merolae",1238,1226,235,1,4998,"Plantae",280699
+"18","Chlamydomonas reinhardtii",6667,154,228,7,17743,"Plantae",3055
+"19","Cucumis sativus",4404,149,186,3,23780,"Plantae",3659
+"20","Daucus carota",4346,133,195,3,32109,"Plantae",79200
+"21","Dioscorea rotundata",6300,139,195,5,19023,"Plantae",55577
+"22","Eragrostis tef",5073,138,184,5,41555,"Plantae",110835
+"23","Glycine max",5910,146.5,214,3,55897,"Plantae",3847
+"24","Gossypium raimondii",4979,142,149,3,38208,"Plantae",29730
+"25","Galdieria sulphuraria",1651,245,52,2,6622,"Plantae",130081
+"26","Helianthus annuus",4634,168,143,3,52191,"Plantae",4232
+"27","Hordeum vulgare",7492,135,137,3,37705,"Plantae",112509
+"28","Lupinus angustifolius",4621,131,235,4,33074,"Plantae",3871
+"29","Leersia perrieri",5969,133,179,4,29078,"Plantae",77586
+"30","Musa acuminata",4782,138,150,4,36519,"Plantae",214687
+"31","Manihot esculenta",5272,153,175,3,33044,"Plantae",3983
+"32","Marchantia polymorpha",6375,157,235,3,19287,"Plantae",3197
+"33","Medicago truncatula",4470,150,202,3,50444,"Plantae",3880
+"34","Nicotiana attenuata",5284,169,256,3,33320,"Plantae",49451
+"35","Oryza barthii",5244,135,182,3,34575,"Plantae",65489
+"36","Oryza brachyantha",4207,136,126,3,32037,"Plantae",4533
+"37","Oryza glaberrima",3527,137,157,3,33164,"Plantae",4538
+"38","Oryza glumipatula",5978,133,190,3,35735,"Plantae",40148
+"39","Oryza sativa Indica Group",3602,143,172,2,40745,"Plantae",39946
+"40","Oryza longistaminata",4163,125,200,3,31686,"Plantae",4528
+"41","Ostreococcus lucimarinus",1113,767,110,1,7603,"Plantae",436017
+"42","Oryza meridionalis",8188,140,184,3,29308,"Plantae",40149
+"43","Oryza nivara",6052,134,189,3,36313,"Plantae",4536
+"44","Oryza punctata",5846,130,177,4,31762,"Plantae",4537
+"45","Oryza rufipogon",5814,134,192,3,37071,"Plantae",4529
+"46","Oryza sativa Japonica Group",4368,172,155,3,35775,"Plantae",39947
+"47","Panicum hallii FIL2",4984,159,136,3,33805,"Plantae",206008
+"48","Panicum hallii HAL2",4930,160,136,3,33263,"Plantae",1504633
+"49","Physcomitrella patens",5658,167,218,3,32234,"Plantae",3218
+"50","Prunus persica",5403,146,170,3,26873,"Plantae",3760
+"51","Populus trichocarpa",5201,146,175,3,41335,"Plantae",3694
+"52","Phaseolus vulgaris",5052,155,194,3,28134,"Plantae",3885
+"53","Sorghum bicolor",5238,161,144,3,34118,"Plantae",4558
+"54","Setaria italica",4020,156,133,3,35831,"Plantae",4555
+"55","Solanum lycopersicum",5693,150,220,3,34429,"Plantae",4081
+"56","Selaginella moellendorffii",2023,128,59,4,34799,"Plantae",88036
+"57","Solanum tuberosum",5157,179,249,2,39021,"Plantae",4113
+"58","Triticum aestivum",5263,153,140,3,107545,"Plantae",4565
+"59","Theobroma cacao",5524,147,193,4,21146,"Plantae",3641
+"60","Triticum dicoccoides",6678,131,141,4,62569,"Plantae",85692
+"61","Trifolium pratense",4754,167,233,3,39917,"Plantae",57577
+"62","Triticum turgidum",6395,122,137,3,66545,"Plantae",4567
+"63","Triticum urartu",4049,130,200,3,33483,"Plantae",4572
+"64","Vigna angularis",3740,143,186,3,33860,"Plantae",3914
+"65","Vigna radiata",5547,137,220,5,22368,"Plantae",3916
+"66","Vitis vinifera",5866,146,249,3,29927,"Plantae",29760
+"67","Zea mays",9394,141,134,4,39591,"Plantae",4577
+"68","Atta cephalotes",6730,181,222,5,10491,"Metazoa",12957
+"69","Anopheles darlingi",3663,190,89,4,10553,"Metazoa",43151
+"70","Anopheles gambiae",7629,256,98,3,13057,"Metazoa",7165
+"71","Anoplophora glabripennis",7936,190,311,4,22253,"Metazoa",217634
+"72","Apis mellifera",5085,189,129,4,15314,"Metazoa",7460
+"73","Acyrthosiphon pisum",7762,204,200,3,36195,"Metazoa",7029
+"74","Amphimedon queenslandica",3439,130,70,3,43615,"Metazoa",400682
+"75","Adineta vaga",1985,141,58,3,49300,"Metazoa",104782
+"76","Belgica antarctica",2732,172,72,3,13510,"Metazoa",315563
+"77","Bombus impatiens",4167.5,185,124,4,15896,"Metazoa",132113
+"78","Branchiostoma lanceolatum",7498,141,485,4,35955,"Metazoa",7740
+"79","Brugia malayi",5955,138,227,7,11010,"Metazoa",6279
+"80","Bombyx mori",9155,157,717,4,14623,"Metazoa",7091
+"81","Bombus terrestris",11978,201,162,6,10581,"Metazoa",30195
+"82","Caenorhabditis brenneri",2353,158,55,4,30674,"Metazoa",135651
+"83","Caenorhabditis briggsae",3671,164,54,5,20996,"Metazoa",6238
+"84","Caenorhabditis elegans",4529,161,83,5,20191,"Metazoa",6239
+"85","Crassostrea gigas",11945,128,405,4,26089,"Metazoa",29159
+"86","Caenorhabditis japonica",3041,160,81,3,29931,"Metazoa",281687
+"87","Culex quinquefasciatus",4476,198,109,3,18965,"Metazoa",7176
+"88","Caenorhabditis remanei",2278,158,53,4,31436,"Metazoa",31234
+"89","Culicoides sonorensis",7099,215,70,4,15612,"Metazoa",179676
+"90","Capitella teleta",3735,138,62,3,32175,"Metazoa",283909
+"91","Drosophila ananassae",9712,234,79,3,14365,"Metazoa",7217
+"92","Drosophila erecta",9850,225,103,3,13605,"Metazoa",7220
+"93","Drosophila grimshawi",8473,226,109,3,13705,"Metazoa",7222
+"94","Daphnia magna",3528,211,74,3,26646,"Metazoa",35525
+"95","Drosophila melanogaster",10943,249,104,3,13947,"Metazoa",7227
+"96","Drosophila mojavensis",9950,222,96,3,13425,"Metazoa",7230
+"97","Drosophila persimilis",2570,215,71,3,16874,"Metazoa",7234
+"98","Danaus plexippus",7106,148,287,5,15128,"Metazoa",13037
+"99","Dendroctonus ponderosae",4490,186,67,5,13088,"Metazoa",77166
+"100","Drosophila pseudoobscura",9820,233,78,3,14574,"Metazoa",46245
+"101","Daphnia pulex",2221,155,76,3,30590,"Metazoa",6669
+"102","Drosophila sechellia",2602,213,72,3,16465,"Metazoa",7238
+"103","Drosophila simulans",11107,232,101,3,14179,"Metazoa",7240
+"104","Dinothrombium tinctorium",2072,195,61,3,19024,"Metazoa",1965070
+"105","Drosophila virilis",10236,225,99,3,13620,"Metazoa",7244
+"106","Drosophila willistoni",4736,216,75,3,13783,"Metazoa",7260
+"107","Drosophila yakuba",10647,236,106,3,14824,"Metazoa",7245
+"108","Folsomia candida str. VU population",4827,191,89,4,28732,"Metazoa",158441
+"109","Heliconius melpomene",9867,159,426,5,12669,"Metazoa",34740
+"110","Hofstenia miamia",20791,158,1015,3,22454,"Metazoa",442651
+"111","Helobdella robusta",4922,129,256,4,23432,"Metazoa",6412
+"112","Ixodes scapularis",16827,145,1602,3,20486,"Metazoa",6945
+"113","Lingula anatina",9088,128,373,5,34105,"Metazoa",7574
+"114","Lucilia cuprina",8065,214,141,4,14452,"Metazoa",7375
+"115","Leptotrombidium deliense",1403,194,55,2,14667,"Metazoa",299467
+"116","Lottia gigantea",7259,133,370,4,23340,"Metazoa",225164
+"117","Loa loa",4428,135,239,4,14908,"Metazoa",7209
+"118","Lepeophtheirus salmonis",5123,216,97,3,13081,"Metazoa",72036
+"119","Melitaea cinxia",9146,129,607,5,16629,"Metazoa",113334
+"120","Mayetiola destructor",4312,176,90,3,19927,"Metazoa",39758
+"121","Mnemiopsis leidyi",8487,146,277,4,16058,"Metazoa",27923
+"122","Megaselia scalaris",2120,169,101,2,11461,"Metazoa",36166
+"123","Nematostella vectensis",7678,122,438,3,24773,"Metazoa",45351
+"124","Nasonia vitripennis",4221,193,93,4,17083,"Metazoa",7425
+"125","Octopus bimaculoides",32626,142,1529,2,33609,"Metazoa",37653
+"126","Orchesella cincta",3050,186,90,4,20247,"Metazoa",48709
+"127","Onchocerca volvulus",7102,141,255,7,12117,"Metazoa",6282
+"128","Pediculus humanus",3405,177,94,5,10785,"Metazoa",121224
+"129","Pristionchus pacificus",6717,90,115,8,25516,"Metazoa",54126
+"130","Rhodnius prolixus",8466,152,511,4,15061,"Metazoa",13249
+"131","Solenopsis invicta",9673,203,251,5,14466,"Metazoa",13686
+"132","Schistosoma mansoni",21690,170,1545,5,10772,"Metazoa",6183
+"133","Strigamia maritima",5498,138,71,6,14992,"Metazoa",126957
+"134","Stegodyphus mimosarum",34909,124,3855,2,27135,"Metazoa",407821
+"135","Strongylocentrotus purpuratus",13433,144,738,5,28842,"Metazoa",7668
+"136","Strongyloides ratti",1573.5,272,53,2,12464,"Metazoa",34506
+"137","Sarcoptes scabiei",1452,207,70,2,10471,"Metazoa",52283
+"138","Trichoplax adhaerens",4690,102,135,6,11520,"Metazoa",10228
+"139","Tribolium castaneum",6231,215,57,4,16590,"Metazoa",7070
+"140","Teleopsis dalmanni",4563,133,123,6,16570,"Metazoa",139649
+"141","Thelohanellus kitauei",1009,140,23,2,15020,"Metazoa",669202
+"142","Trichinella spiralis",2554,128,84,4,16380,"Metazoa",6334
+"143","Tetranychus urticae",2196,175,97,3,17671,"Metazoa",32264
+"144","Zootermopsis nevadensis",10423,159,751,4,14610,"Metazoa",136037
+"145","Astatotilapia calliptera",19898,130,403,6,26983,"Chordata",8154
+"146","Anolis carolinensis",35710,128,1351,7,18595,"Chordata",28377
+"147","Amphilophus citrinellus",12631,126,384,6,23675,"Chordata",61819
+"148","Ailuropoda melanoleuca",34437,121,1114,7,19343,"Chordata",9646
+"149","Aotus nancymaae",58515,122,1527,7,20320,"Chordata",37293
+"150","Anas platyrhynchos platyrhynchos",38207,127,1014,7,16616,"Chordata",8840
+"151","Anabas testudineus",13895,131,300,7,24603,"Chordata",64144
+"152","Bos taurus",59294,130,1448,6,21861,"Chordata",9913
+"153","Colobus angolensis palliatus",58439,124,1559,7,20467,"Chordata",336983
+"154","Cavia aperea",33051,121,1069,7,14218,"Chordata",37548
+"155","Cercocebus atys",62708,125,1561,7,20746,"Chordata",9531
+"156","Cebus capucinus imitator",57644,125,1533,7,20200,"Chordata",1737458
+"157","Canis lupus familiaris",74072,127,1467,7,20199,"Chordata",9615
+"158","Cricetulus griseus",38908,125,1254,7,19617,"Chordata",10029
+"159","Capra hircus",52751,127,1364,7,21343,"Chordata",9925
+"160","Choloepus hoffmanni",33808,102,830,9,12393,"Chordata",9358
+"161","Ciona intestinalis",5463,135,324,5,16671,"Chordata",7719
+"162","Callithrix jacchus",67102,123,1662,6,22509,"Chordata",9483
+"163","Chinchilla lanigera",50886,128,1333,8,17809,"Chordata",34839
+"164","Cavia porcellus",44827,127,1219,8,18095,"Chordata",10141
+"165","Chlorocebus sabaeus",42731,130,1460,7,19165,"Chordata",60711
+"166","Ciona savignyi",13063,133,456,6,11616,"Chordata",51511
+"167","Cynoglossus semilaevis",13659,129,284,8,21371,"Chordata",244447
+"168","Carlito syrichta",44031,122,1411,7,18304,"Chordata",1868482
+"169","Cyprinodon variegatus",21996,132,519,7,22993,"Chordata",28743
+"170","Dasypus novemcinctus",42104,127,1165,6,22711,"Chordata",9361
+"171","Dipodomys ordii",38400,124,1224,8,16911,"Chordata",10020
+"172","Danio rerio",32338,129,1143,7,30153,"Chordata",7955
+"173","Eptatretus burgeri",98508,135,2583,7,16513,"Chordata",7764
+"174","Equus caballus",74725,126,1475,7,20912,"Chordata",9796
+"175","Erinaceus europaeus",43787,99,653,10,14601,"Chordata",9365
+"176","Esox lucius",22674,132,441,8,23925,"Chordata",8010
+"177","Echinops telfairi",45119,90,355,11,16575,"Chordata",9371
+"178","Ficedula albicollis",26336,130,864,8,15303,"Chordata",59894
+"179","Felis catus",68910,126,1530,7,19563,"Chordata",9685
+"180","Fukomys damarensis",43106,126,1247,8,17730,"Chordata",885580
+"181","Fundulus heteroclitus",21980,132,592,7,23054,"Chordata",8078
+"182","Gasterosteus aculeatus",8815,122,222,8,20787,"Chordata",69293
+"183","Gopherus agassizii",64143,130,1631,6,20135,"Chordata",38772
+"184","Gallus gallus",35011,128,895,8,16779,"Chordata",9031
+"185","Gorilla gorilla gorilla",56197,125,1523,7,21587,"Chordata",9595
+"186","Gadus morhua",14545,100,289,9,20095,"Chordata",8049
+"187","Haplochromis burtoni",19369,131,413,7,23044,"Chordata",8153
+"188","Hippocampus comes",11715,130,321,7,20850,"Chordata",109280
+"189","Heterocephalus glaber",47857,128,1246,7,20774,"Chordata",10181
+"190","Homo sapiens",53704,126,1496,8,22799,"Chordata",9606
+"191","Ictalurus punctatus",22048,129,555,7,23598,"Chordata",7998
+"192","Ictidomys tridecemlineatus",47145,128,1299,7,18474,"Chordata",43179
+"193","Jaculus jaculus",47500,123,1450,7,17845,"Chordata",51337
+"194","Loxodonta africana",41282,119,1142,7,20033,"Chordata",9785
+"195","Labrus bergylta",14801,128,416,6,27270,"Chordata",56723
+"196","Latimeria chalumnae",50303,122,1780,7,19569,"Chordata",7897
+"197","Lepisosteus oculatus",26519,126,737,8,18341,"Chordata",7918
+"198","Monopterus albus",17228,128,439,7,22121,"Chordata",43700
+"199","Mastacembelus armatus",15168,131,331,7,23279,"Chordata",205130
+"200","Mesocricetus auratus",39292,125,1242,7,18257,"Chordata",10036
+"201","Mus caroli",46469,129,1341,8,19613,"Chordata",10089
+"202","Monodelphis domestica",87306,130,1946,6,21380,"Chordata",13616
+"203","Macaca fascicularis",64549,125,1600,7,21404,"Chordata",9541
+"204","Meleagris gallopavo",22789,118,718,8,14123,"Chordata",9103
+"205","Mandrillus leucophaeus",57954,124,1548,7,20660,"Chordata",9568
+"206","Myotis lucifugus",26974,120,1035,7,19728,"Chordata",59463
+"207","Macaca mulatta",79566,127,1683,7,21578,"Chordata",9544
+"208","Microcebus murinus",56402,125,1402,8,18816,"Chordata",30608
+"209","Mus musculus",43350,129,1353,7,22284,"Chordata",10090
+"210","Macaca nemestrina",64098,125,1587,7,20872,"Chordata",9545
+"211","Microtus ochrogaster",42432,125,1292,7,19130,"Chordata",79684
+"212","Mus pahari",46061,128,1322,8,19440,"Chordata",10093
+"213","Mustela putorius furo",39614,129,1248,7,19910,"Chordata",9669
+"214","Mus spretus",49666,128,1389,7,19905,"Chordata",10096
+"215","Maylandia zebra",17860,131,395,7,27156,"Chordata",106582
+"216","Notamacropus eugenii",32901,100,516,10,15290,"Chordata",9315
+"217","Nannospalax galili",47310,125,1370,7,18647,"Chordata",1026970
+"218","Nomascus leucogenys",56087,123,1571,7,20648,"Chordata",61853
+"219","Ornithorhynchus anatinus",20714,124,1048,5,21698,"Chordata",9258
+"220","Ovis aries",36623,123,1153,7,20921,"Chordata",9940
+"221","Oryctolagus cuniculus",74082,126,1630,6,20599,"Chordata",9986
+"222","Octodon degus",40921,123,1187,6,19982,"Chordata",10160
+"223","Otolemur garnettii",36227,123,1271,7,19506,"Chordata",30611
+"224","Oryzias latipes",20352,130,355,7,23600,"Chordata",8090
+"225","Oryzias melastigma",19198,131,391,7,23510,"Chordata",30732
+"226","Oreochromis niloticus",23559,127,366,6,28142,"Chordata",8128
+"227","Ochotona princeps",35796,100,541,10,16006,"Chordata",9978
+"228","Pongo abelii",44211,123,1320,7,20424,"Chordata",9601
+"229","Papio anubis",58695,121,1562,7,21464,"Chordata",9555
+"230","Procavia capensis",34447,102,705,10,16057,"Chordata",9813
+"231","Phascolarctos cinereus",79386.5,128,1843,7,19832,"Chordata",38626
+"232","Propithecus coquereli",47704,123,1291,7,17884,"Chordata",379532
+"233","Poecilia formosa",17571,129,378,8,23615,"Chordata",48698
+"234","Paramormyrops kingsleyae",19556,130,457,7,24782,"Chordata",1676925
+"235","Poecilia latipinna",15594,130,433,7,23617,"Chordata",48699
+"236","Petromyzon marinus",15713,115,765,6,10415,"Chordata",7757
+"237","Peromyscus maniculatus bairdii",40154,122,1387,6,21644,"Chordata",230844
+"238","Poecilia mexicana",17456,131,441,7,24043,"Chordata",48701
+"239","Pygocentrus nattereri",27267,131,891,7,26675,"Chordata",42514
+"240","Pundamilia nyererei",14874,129,370,7,23473,"Chordata",303518
+"241","Pan paniscus",56178,124,1521,7,21041,"Chordata",9597
+"242","Panthera pardus",49729,125,1523,7,19646,"Chordata",9691
+"243","Poecilia reticulata",18218,125,464,7,22857,"Chordata",8081
+"244","Pelodiscus sinensis",46578,128,1606,7,18189,"Chordata",13735
+"245","Panthera tigris altaica",44645,122,1451,7,17544,"Chordata",74533
+"246","Pan troglodytes",60489,125,1553,7,23302,"Chordata",9598
+"247","Pteropus vampyrus",28802,106,736,10,16990,"Chordata",132908
+"248","Rhinopithecus bieti",56557,124,1533,7,20824,"Chordata",61621
+"249","Rattus norvegicus",42222,129,1259,6,22250,"Chordata",10116
+"250","Rhinopithecus roxellana",57043,125,1517,7,21132,"Chordata",61622
+"251","Sorex araneus",40847.5,100,626,10,13187,"Chordata",42254
+"252","Saimiri boliviensis boliviensis",61545,125,1583,7,19290,"Chordata",39432
+"253","Seriola dumerili",16024,131,411,8,23241,"Chordata",41447
+"254","Scleropages formosus",23495,128,439,8,24103,"Chordata",113540
+"255","Sarcophilus harrisii",42466,124,1310,7,18788,"Chordata",9305
+"256","Seriola lalandi dorsalis",14805,130,390,7,24724,"Chordata",1841481
+"257","Scophthalmus maximus",17154,130,367,8,20997,"Chordata",52904
+"258","Sphenodon punctatus",62398,128,2084,7,17628,"Chordata",8508
+"259","Sus scrofa",70737,128,1506,8,21278,"Chordata",9823
+"260","Tupaia belangeri",49661,95,633,10,15471,"Chordata",37347
+"261","Taeniopygia guttata",44767,130,933,9,16619,"Chordata",59729
+"262","Tetraodon nigroviridis",7353,118,121,8,19602,"Chordata",99883
+"263","Takifugu rubripes",13501,127,196,8,21383,"Chordata",31033
+"264","Tursiops truncatus",33723,107,836,10,16550,"Chordata",9739
+"265","Ursus americanus",38838,127,1179,5,20542,"Chordata",9643
+"266","Ursus maritimus",50839,125,1359,7,18699,"Chordata",29073
+"267","Vicugna pacos",50349,104,1003,9,11765,"Chordata",30538
+"268","Vulpes vulpes",66709,128,1491,7,20266,"Chordata",9627
+"269","Xiphophorus maculatus",20566,131,537,7,23753,"Chordata",8083
+"270","Xenopus tropicalis",44869,128,964,7,19983,"Chordata",8364
+"271","Aspergillus clavatus NRRL 1",1622,252,64,3,9121,"Fungi",344612
+"272","Aspergillus flavus NRRL3357",1521,261,62,2,13485,"Fungi",332952
+"273","Aspergillus fumigatus Af293",1613,273,61,3,9623,"Fungi",330879
+"274","Aspergillus fumigatus A1163",1594,268,61,3,9929,"Fungi",451804
+"275","Ashbya gossypii",1187,1151,62,1,4776,"Fungi",284811
+"276","Aspergillus nidulans",1752,250,61,3,10534,"Fungi",227321
+"277","Aspergillus niger",1584,174,69,3,13872,"Fungi",5061
+"278","Aspergillus oryzae RIB40",1574,250,63,3,12074,"Fungi",510516
+"279","Aspergillus terreus NIH2624",1674,257,59,3,10401,"Fungi",341663
+"280","Beauveria bassiana",1967,416,64,2,10095,"Fungi",176275
+"281","Botrytis cinerea B05.10",2302,426,60,3,11707,"Fungi",332648
+"282","Blumeria graminis",2164,432,54,3,7118,"Fungi",546991
+"283","Colletotrichum gloeosporioides",1608,283,59,3,15381,"Fungi",1213859
+"284","Colletotrichum graminicola",1568,278,64,2,12020,"Fungi",645133
+"285","Colletotrichum higginsianum",1290,257,68,2,16141,"Fungi",80884
+"286","Cryptococcus neoformans var. neoformans JEC21",2476,185,56,5,6632,"Fungi",214684
+"287","Colletotrichum orbiculare",1680,249,63,2,13346,"Fungi",1213857
+"288","Dothistroma septosporum",1756,469,57,2,12400,"Fungi",675120
+"289","Fusarium culmorum UK99",1882,315,56,3,12465,"Fungi",1318462
+"290","Fusarium fujikuroi",1586,293,54,2,14815,"Fungi",5127
+"291","Fusarium graminearum str. PH-1",1789,334,55,2,14145,"Fungi",5518
+"292","Fusarium oxysporum",1543,287,59,2,17696,"Fungi",426428
+"293","Fusarium pseudograminearum",1588,263,55,2,12448,"Fungi",1028729
+"294","Fusarium solani",1691,281,56,3,15705,"Fungi",660122
+"295","Fusarium verticillioides",1637,302,58,2,14166,"Fungi",334819
+"296","Gaeumannomyces tritici R3-111a-1",1984,377,89,2,14458,"Fungi",644352
+"297","Komagataella pastoris",1187,1085,64,1,5040,"Fungi",644223
+"298","Leptosphaeria maculans",1534,213,64,2,12469,"Fungi",985895
+"299","Melampsora larici-populina",1944,148,80,4,16372,"Fungi",747676
+"300","Magnaporthe oryzae",2001,373,89,2,12593,"Fungi",242507
+"301","Magnaporthe poae",2256,409,89,2,11209,"Fungi",644358
+"302","Microbotryum violaceum",2540,195,81,5,7364,"Fungi",683840
+"303","Neurospora crassa",2396,553,75,2,9758,"Fungi",367110
+"304","Aspergillus fischeri NRRL 181",1592,263,60,3,10395,"Fungi",331117
+"305","Puccinia graminis",2085,174,87,3,15800,"Fungi",418459
+"306","Puccinia graminis Ug99",2203,179,87,3,22154,"Fungi",1040990
+"307","Phaeosphaeria nodorum",1442,294,56,2,12391,"Fungi",321614
+"308","Puccinia striiformis f. sp. tritici PST-130 str. Race 130",1452,144,82,3,18019,"Fungi",875184
+"309","Pyrenophora teres",1484,311,55,2,11799,"Fungi",861557
+"310","Puccinia triticina",1935,172,83,3,11638,"Fungi",630390
+"311","Pyrenophora tritici-repentis Pt-1C-BFP",1580,305,57,2,12169,"Fungi",426418
+"312","Saccharomyces cerevisiae",1052,1007,153,1,6600,"Fungi",559292
+"313","Schizosaccharomyces cryophilus",1820,475,55,2,5155,"Fungi",653667
+"314","Schizosaccharomyces japonicus",1908.5,486,57,2,4878,"Fungi",402676
+"315","Schizosaccharomyces octosporus",1811,466,55,1,4986,"Fungi",483514
+"316","Schizosaccharomyces pombe",1941,498,57,1,5145,"Fungi",284812
+"317","Sporisorium reilianum",1382,860,88,1,6673,"Fungi",999809
+"318","Sclerotinia sclerotiorum",1415,184,78,2,10175,"Fungi",665079
+"319","Tuber melanosporum",2197,273,64,3,7496,"Fungi",656061
+"320","Trichoderma reesei",1766,284,76,3,9113,"Fungi",431241
+"321","Trichoderma virens",1705,298,68,3,12400,"Fungi",413071
+"322","Ustilago maydis",1393,863,101,1,6765,"Fungi",237631
+"323","Verticillium dahliae",1674,312,65,2,10535,"Fungi",498257
+"324","Verticillium dahliae JR2",1982.5,475,63,2,11391,"Fungi",1202531
+"325","Yarrowia lipolytica",1253,1058,206,1,6448,"Fungi",284591
+"326","Zymoseptoria tritici",1610,298,63,2,10931,"Fungi",336722
+"327","Albugo laibachii",1698,184.5,57,2,13804,"Protista",890382
+"328","Bigelowiella natans",3835,79,153,7,21706,"Protista",753081
+"329","Dictyostelium discoideum",1595,319,105,2,13209,"Protista",352472
+"330","Entamoeba histolytica",1023,680,58,1,8113,"Protista",294381
+"331","Emiliania huxleyi",2062,183,124,3,38544,"Protista",280463
+"332","Giardia lamblia",764,764,73,1,7364,"Protista",184922
+"333","Guillardia theta CCMP2712",2282,85,54,4,24945,"Protista",905079
+"334","Hyaloperonospora arabidopsidis",1040,222,93,1,14321,"Protista",559515
+"335","Leishmania major",1403,1400,3,1,8315,"Protista",347515
+"336","Pythium aphanidermatum",1558,335,66,2,12305,"Protista",1223555
+"337","Pythium arrhenomanes",1590,296,77,2,13805,"Protista",1223556
+"338","Plasmodium berghei",1950,153,133,2,4903,"Protista",5823
+"339","Plasmodium chabaudi",1840,150,126,2,5157,"Protista",31271
+"340","Plasmodium falciparum 3D7",2048,157,143,2,5358,"Protista",36329
+"341","Phytophthora infestans",1480,218,74,2,17785,"Protista",403677
+"342","Pythium irregulare",1751,239,93,2,13804,"Protista",1223557
+"343","Pythium iwayamai",1676,236,85,2,15248,"Protista",1223558
+"344","Phytophthora kernoviae",1799,125,110,3,10650,"Protista",1284355
+"345","Plasmodium knowlesi",2169,194,170,2,5102,"Protista",5851
+"346","Phytophthora lateralis",1687,176,86,2,11635,"Protista",1254522
+"347","Pseudo-nitzschia multistriata",2289,1103,154,1,11895,"Protista",183589
+"348","Phytophthora parasitica",1881,305,70,1,23159,"Protista",1317065
+"349","Phytophthora ramorum",1660,277,75,2,15605,"Protista",164328
+"350","Phytophthora sojae",1439,273,78,2,26489,"Protista",67593
+"351","Paramecium tetraurelia",1394,230,26,3,39642,"Protista",5888
+"352","Phaeodactylum tricornutum",1459,647,89,1,12178,"Protista",556484
+"353","Pythium ultimum",1530,227,86,2,15290,"Protista",431595
+"354","Pythium vexans",1749,251,74,2,11957,"Protista",1223560
+"355","Plasmodium vivax",2280,286,163,2,5389,"Protista",5855
+"356","Trypanosoma brucei",1154,1154,988,1,8747,"Protista",5691
+"357","Toxoplasma gondii ME49",7892,199,469,4,8303,"Protista",508771
+"358","Thalassiosira pseudonana",1818,400,91,2,11672,"Protista",296543
+"359","Tetrahymena thermophila",3466,223,86,3,24725,"Protista",312017

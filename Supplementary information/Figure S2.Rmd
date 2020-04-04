@@ -1,0 +1,270 @@
+---
+title: "Figure S2"
+author: "Matt McCoy"
+date: "3/30/2020"
+output: html_document
+---
+
+Load libraries.
+```{r}
+library(ggplot2)
+library(dplyr)
+library(reshape2)
+library(Hmisc)
+library(devtools)
+library(multidplyr)
+library(zoo)
+```
+
+Load expression and gene annotation data.
+```{r}
+expression.files <- list.files(
+  path = "../public_data/expression_data/",
+  pattern = "results.tpms.tsv"
+)
+
+gene.list <- list()
+expression.list <- list()
+for (file in expression.files){
+  filepath <- paste(
+    "../public_data/expression_data/", 
+    file, 
+    sep = ""
+  )
+  expression.data <- read.table(
+    file = filepath, 
+    sep = "\t", 
+    header = T
+  )
+  expression.data$Gene.Name <- NULL
+  expression.data <- melt(
+    data = expression.data, 
+    id.vars = c("Gene.ID")
+  )
+  expression.data$value[is.na(expression.data$value)] <- 0
+  species <- paste(
+    tolower(
+      substr(
+        x = file,
+        start = 1,
+        stop = 1
+      )
+    ),
+    strsplit(x = file, split = "_")[[1]][2],
+    sep = ""
+  )
+  # Retrieve gene architecture annotations
+  if(species %in% c("celegans", "zmays")){
+      gene.data <- readRDS(
+    file = paste(
+      "../Supplementary information/intron_exon_tables/",
+      species,
+      "_eg_gene_intron_exon.RData",
+      sep = ""
+    )
+  )
+  } else {
+    gene.data <- readRDS(
+      file = paste(
+      "../Supplementary information/intron_exon_tables/",
+      species,
+      "_gene_ensembl_intron_exon.RData",
+      sep = ""
+    )
+    )}
+  gene.list[[species]] <- gene.data
+  expression.list[[species]] <- expression.data
+}
+
+# Add Drosophila and Octopus datasets
+expression.list$obimaculoides <- {
+  fcounts <- readRDS("../public_data/expression_data/Obimaculoides/fcounts.RDS")
+  counts <- as.data.frame(fcounts$counts)
+  feature_lengths <- fcounts$annotation$Length[match(
+    rownames(counts),
+    fcounts$annotation$GeneID)]
+  tpm.func <- function(counts,len) {
+    x <- counts/len
+    return(t(t(x)*1e6/colSums(x)))
+  }
+  tpm <- tpm.func(counts, feature_lengths)
+  tpm <- as.data.frame(tpm)
+  rownames(tpm) <- rownames(counts)
+  SraRunTable <- read.table(
+    file = "../public_data/expression_data/Obimaculoides/SraRunTable.txt", 
+    sep = "\t", 
+    header = TRUE)
+  # rename samples based on tissue name
+  for (i in 1:nrow(SraRunTable)){
+    names(tpm)[grep(
+      pattern = SraRunTable$Run[i], 
+      x = names(tpm), 
+      value = F)] <- as.character(SraRunTable$tissue[i])
+  }
+  melt(as.matrix(tpm)) %>%
+    select(
+      Gene.ID = Var1, 
+      variable = Var2, 
+      value = value)
+}
+
+expression.list$dmelanogaster <- {
+  fcounts <- readRDS("../public_data/expression_data/Dmelanogaster/fcounts.RDS")
+  counts <- as.data.frame(fcounts$counts)
+  feature_lengths <- fcounts$annotation$Length[match(
+    rownames(counts),
+    fcounts$annotation$GeneID)]
+  tpm.func <- function(counts,len) {
+    x <- counts/len
+    return(t(t(x)*1e6/colSums(x)))
+  }
+  tpm <- tpm.func(counts, feature_lengths)
+  tpm <- as.data.frame(tpm)
+  rownames(tpm) <- rownames(counts)
+  SraRunTable <- read.table(
+    file = "../public_data/expression_data/Dmelanogaster/SraRunTable.txt", 
+    sep = "\t", 
+    header = TRUE)
+  # rename samples based on tissue name
+  for (i in 1:nrow(SraRunTable)){
+    names(tpm)[grep(
+      pattern = SraRunTable$Run[i], 
+      x = names(tpm), 
+      value = F)] <- as.character(SraRunTable$Sample_Name[i])
+  }
+  melt(as.matrix(tpm)) %>% 
+    select(
+      Gene.ID = Var1,
+      variable = Var2, 
+      value = value)
+}
+
+# Remove whole animal data from C. elegans
+expression.list$celegans <- subset(
+  x = expression.list$celegans,
+  !(variable %in% grep(
+    pattern = "organism",
+    x = variable,
+    value = T)))
+
+# Remove tissues with uncertain neuronal composition from O. bimaculoides
+expression.list$obimaculoides <- subset(
+  x = expression.list$obimaculoides,
+  !(variable %in% grep(
+    pattern = "skin|suckers",
+    x = variable,
+    value = T)))
+
+gene.list$obimaculoides <- readRDS(
+  file = "../Supplementary information/intron_exon_tables/obimaculoides_eg_gene_intron_exon.RData")
+gene.list$dmelanogaster <- readRDS(
+  file = "../Supplementary information/intron_exon_tables/dmelanogaster_eg_gene_intron_exon.RData")
+```
+
+Calculate tissue-enrichment.
+```{r}
+# Combine expression and gene annotation data, while calculating top-enriched tissue and
+# fold-change over next top-enriched tissue.
+cluster <- new_cluster(10) # for parallelizing
+plot.data.list <- list()
+for (species in names(expression.list)){
+  plot.data.list[[species]] <- merge(
+    gene.list[[species]][c(
+      "ensembl_gene_id",
+      "intron_length",
+      "rank")],
+    expression.list[[species]] %>%
+    mutate(
+      variable = ifelse(
+        variable %in% grep(
+          "brain|cerebellum|hypothalamus|CNS|NSM|neuron|nerve|optic|retina",
+          variable,
+          value = T),
+        "neuronal",
+        as.character(variable))),
+    by.x = "ensembl_gene_id",
+    by.y = "Gene.ID") %>%
+    group_by(ensembl_gene_id) %>%
+    partition(cluster = cluster) %>%
+    mutate(
+      enriched_tissue = variable[which.max(value)],
+      first_max = max(value[variable %in% enriched_tissue], na.rm = T),
+      second_max = max(value[!(variable %in% enriched_tissue)], na.rm = T)) %>%
+    mutate(fc = mean(value[variable %in% enriched_tissue], na.rm = T)/mean(value[variable %in% variable[value == second_max]], na.rm = T)) %>%
+    collect()
+
+  plot.data.list[[species]]$fc[plot.data.list[[species]]$fc %in% c("NaN")] <- 0
+  plot.data.list[[species]]$fc[plot.data.list[[species]]$fc %in% c("Inf")] <- max(plot.data.list[[species]]$fc[!(plot.data.list[[species]]$fc %in% "Inf")]) # set Inf values to otherwise max fc
+  plot.data.list[[species]]$species <- species
+}
+```
+
+Figure S2. Intron length versus ordinal position for genes with greater than 2-fold tissue enrichment.
+```{r}
+g <- do.call("rbind", plot.data.list) %>%
+    subset(rank < 9 & first_max >= 50*min(value)) %>%
+    select(
+        ensembl_gene_id,
+        rank,
+        intron_length,
+        enriched_tissue,
+        fc,
+        species) %>% 
+  mutate(
+    fc_cut = ifelse(
+      fc < 2, 
+      "fold-difference < 2",
+      ifelse(
+        fc >= 2, 
+        "fold-difference > 2",
+        NA))) %>%
+  filter(!is.na(fc_cut)) %>%
+  mutate(
+    fc_cut = factor(
+      fc_cut,
+      levels = c("fold-difference < 2", "fold-difference > 2")),
+    species = factor(
+      species,
+      levels = c("hsapiens", "btaurus", "mdomestica", "ggallus", "acarolinensis", "obimaculoides", "dmelanogaster", "celegans", "zmays"))) %>%
+  unique() %>%
+  na.omit() %>%
+    ggplot(aes(
+        y = intron_length/1000, 
+        x = rank,
+        col = ifelse(
+            enriched_tissue %in% grep(
+              "neuronal",
+              enriched_tissue, 
+              value = T),
+            "neuronal",
+            "non-neuronal"),
+        group = enriched_tissue)) + 
+    stat_summary() + 
+    stat_summary(geom = "line") +
+    theme_bw() +
+    ylab("Intron length (kb)") +
+    xlab("Intron Ordinal Position") +
+    scale_x_discrete(
+      name = "Intron position", 
+      limits = c(1:8)) +
+    scale_color_manual(
+        name = "Tissue",
+        values = c(
+          "neuronal" = "red", 
+          "non-neuronal" = "grey")) +
+    theme(legend.position = "none") + 
+    facet_grid(
+        species~fc_cut,
+        scales = "free")
+
+ggsave(
+  filename = "./plots/Figure S2.pdf",
+  plot = g,
+  device = "pdf", 
+  width = 4,
+  height = 8,
+  scale = 1.5,
+  units = "in",
+  useDingbats = FALSE)
+```
+

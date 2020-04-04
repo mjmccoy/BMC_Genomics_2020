@@ -1,0 +1,137 @@
+"","dataset","description","version","species","Taxon.ID"
+"1","acalliptera_gene_ensembl","Eastern happy","fAstCal1.2","Astatotilapia calliptera",8154
+"2","acarolinensis_gene_ensembl","Anole lizard","AnoCar2.0","Anolis carolinensis",28377
+"3","acitrinellus_gene_ensembl","Midas cichlid","Midas_v5","Amphilophus citrinellus",61819
+"4","amelanoleuca_gene_ensembl","Panda","ailMel1","Ailuropoda melanoleuca",9646
+"5","anancymaae_gene_ensembl","Ma's night monkey","Anan_2.0","Aotus nancymaae",37293
+"6","aocellaris_gene_ensembl","Clown anemonefish","AmpOce1.0","Amphiprion ocellaris",80972
+"7","apercula_gene_ensembl","Orange clownfish","Nemo_v1","Amphiprion percula",161767
+"8","apolyacanthus_gene_ensembl","Spiny chromis","ASM210954v1","Acanthochromis polyacanthus",80966
+"9","applatyrhynchos_gene_ensembl","Duck","CAU_duck1.0","Anas platyrhynchos platyrhynchos",8840
+"10","atestudineus_gene_ensembl","Climbing perch","fAnaTes1.1","Anabas testudineus",64144
+"11","btaurus_gene_ensembl","Cow","ARS-UCD1.2","Bos taurus",9913
+"12","capalliatus_gene_ensembl","Angola colobus","Cang.pa_1.0","Colobus angolensis palliatus",336983
+"13","caperea_gene_ensembl","Brazilian guinea pig","CavAp1.0","Cavia aperea",37548
+"14","catys_gene_ensembl","Sooty mangabey","Caty_1.0","Cercocebus atys",9531
+"15","ccapucinus_gene_ensembl","Capuchin","Cebus_imitator-1.0","Cebus capucinus imitator",1737458
+"16","cfamiliaris_gene_ensembl","Dog","CanFam3.1","Canis lupus familiaris",9615
+"17","cgcrigri_gene_ensembl","Chinese hamster CriGri","CriGri_1.0","Cricetulus griseus",10029
+"18","chircus_gene_ensembl","Goat","ARS1","Capra hircus",9925
+"19","choffmanni_gene_ensembl","Sloth","choHof1","Choloepus hoffmanni",9358
+"20","cintestinalis_gene_ensembl","C.intestinalis","KH","Ciona intestinalis",7719
+"21","cjacchus_gene_ensembl","Marmoset","ASM275486v1","Callithrix jacchus",9483
+"22","clanigera_gene_ensembl","Long-tailed chinchilla","ChiLan1.0","Chinchilla lanigera",34839
+"23","cporcellus_gene_ensembl","Guinea Pig","Cavpor3.0","Cavia porcellus",10141
+"24","csabaeus_gene_ensembl","Vervet-AGM","ChlSab1.1","Chlorocebus sabaeus",60711
+"25","csavignyi_gene_ensembl","C.savignyi","CSAV 2.0","Ciona savignyi",51511
+"26","csemilaevis_gene_ensembl","Tongue sole","Cse_v1.0","Cynoglossus semilaevis",244447
+"27","csyrichta_gene_ensembl","Tarsier","Tarsius_syrichta-2.0.1","Carlito syrichta",1868482
+"28","cvariegatus_gene_ensembl","Sheepshead minnow","C_variegatus-1.0","Cyprinodon variegatus",28743
+"29","dnovemcinctus_gene_ensembl","Armadillo","Dasnov3.0","Dasypus novemcinctus",9361
+"30","dordii_gene_ensembl","Kangaroo rat","Dord_2.0","Dipodomys ordii",10020
+"31","drerio_gene_ensembl","Zebrafish","GRCz11","Danio rerio",7955
+"32","eburgeri_gene_ensembl","Hagfish","Eburgeri_3.2","Eptatretus burgeri",7764
+"33","ecaballus_gene_ensembl","Horse","EquCab3.0","Equus caballus",9796
+"34","eeuropaeus_gene_ensembl","Hedgehog","eriEur1","Erinaceus europaeus",9365
+"35","elucius_gene_ensembl","Northern pike","Eluc_V3","Esox lucius",8010
+"36","etelfairi_gene_ensembl","Lesser hedgehog tenrec","TENREC","Echinops telfairi",9371
+"37","falbicollis_gene_ensembl","Flycatcher","FicAlb_1.4","Ficedula albicollis",59894
+"38","fcatus_gene_ensembl","Cat","Felis_catus_9.0","Felis catus",9685
+"39","fdamarensis_gene_ensembl","Damara mole rat","DMR_v1.0","Fukomys damarensis",885580
+"40","fheteroclitus_gene_ensembl","Mummichog","Fundulus_heteroclitus-3.0.2","Fundulus heteroclitus",8078
+"41","gaculeatus_gene_ensembl","Stickleback","BROAD S1","Gasterosteus aculeatus",69293
+"42","gaffinis_gene_ensembl","Western mosquitofish","ASM309773v1","Gambusia affinis",33528
+"43","gagassizii_gene_ensembl","Agassiz's desert tortoise","ASM289641v1","Gopherus agassizii",38772
+"44","ggallus_gene_ensembl","Chicken","GRCg6a","Gallus gallus",9031
+"45","ggorilla_gene_ensembl","Gorilla","gorGor4","Gorilla gorilla gorilla",9595
+"46","gmorhua_gene_ensembl","Cod","gadMor1","Gadus morhua",8049
+"47","hburtoni_gene_ensembl","Burton's mouthbrooder","AstBur1.0","Haplochromis burtoni",8153
+"48","hcomes_gene_ensembl","Tiger tail seahorse","H_comes_QL1_v1","Hippocampus comes",109280
+"49","hgfemale_gene_ensembl","Naked mole-rat female","HetGla_female_1.0","Heterocephalus glaber",10181
+"50","hsapiens_gene_ensembl","Human","GRCh38.p13","Homo sapiens",9606
+"51","ipunctatus_gene_ensembl","Channel catfish","IpCoco_1.2","Ictalurus punctatus",7998
+"52","itridecemlineatus_gene_ensembl","Squirrel","SpeTri2.0","Ictidomys tridecemlineatus",43179
+"53","jjaculus_gene_ensembl","Lesser Egyptian jerboa","JacJac1.0","Jaculus jaculus",51337
+"54","kmarmoratus_gene_ensembl","Mangrove rivulus","ASM164957v1","Kryptolebias marmoratus",37003
+"55","lafricana_gene_ensembl","Elephant","Loxafr3.0","Loxodonta africana",9785
+"56","lbergylta_gene_ensembl","Ballan wrasse","BallGen_V1","Labrus bergylta",56723
+"57","lchalumnae_gene_ensembl","Coelacanth","LatCha1","Latimeria chalumnae",7897
+"58","loculatus_gene_ensembl","Spotted gar","LepOcu1","Lepisosteus oculatus",7918
+"59","malbus_gene_ensembl","Swamp eel","M_albus_1.0","Monopterus albus",43700
+"60","marmatus_gene_ensembl","Zig-zag eel","fMasArm1.1","Mastacembelus armatus",205130
+"61","mauratus_gene_ensembl","Golden Hamster","MesAur1.0","Mesocricetus auratus",10036
+"62","mcaroli_gene_ensembl","Ryukyu mouse","CAROLI_EIJ_v1.1","Mus caroli",10089
+"63","mdomestica_gene_ensembl","Opossum","ASM229v1","Monodelphis domestica",13616
+"64","mfascicularis_gene_ensembl","Crab-eating macaque","Macaca_fascicularis_5.0","Macaca fascicularis",9541
+"65","mgallopavo_gene_ensembl","Turkey","Turkey_2.01","Meleagris gallopavo",9103
+"66","mleucophaeus_gene_ensembl","Drill","Mleu.le_1.0","Mandrillus leucophaeus",9568
+"67","mlucifugus_gene_ensembl","Microbat","Myoluc2.0","Myotis lucifugus",59463
+"68","mmola_gene_ensembl","Ocean sunfish","ASM169857v1","Mola mola",94237
+"69","mmulatta_gene_ensembl","Macaque","Mmul_10","Macaca mulatta",9544
+"70","mmurinus_gene_ensembl","Mouse Lemur","Mmur_3.0","Microcebus murinus",30608
+"71","mmusculus_gene_ensembl","Mouse","GRCm38.p6","Mus musculus",10090
+"72","mnemestrina_gene_ensembl","Pig-tailed macaque","Mnem_1.0","Macaca nemestrina",9545
+"73","mochrogaster_gene_ensembl","Prairie vole","MicOch1.0","Microtus ochrogaster",79684
+"74","mpahari_gene_ensembl","Shrew mouse","PAHARI_EIJ_v1.1","Mus pahari",10093
+"75","mpfuro_gene_ensembl","Ferret","MusPutFur1.0","Mustela putorius furo",9669
+"76","mspretus_gene_ensembl","Algerian mouse","SPRET_EiJ_v1","Mus spretus",10096
+"77","mzebra_gene_ensembl","Zebra mbuna","M_zebra_UMD2a","Maylandia zebra",106582
+"78","nbrichardi_gene_ensembl","Lyretail cichlid","NeoBri1.0","Neolamprologus brichardi",32507
+"79","neugenii_gene_ensembl","Wallaby","Meug_1.0","Notamacropus eugenii",9315
+"80","ngalili_gene_ensembl","Upper Galilee mountains blind mole rat","S.galili_v1.0","Nannospalax galili",1026970
+"81","nleucogenys_gene_ensembl","Gibbon","Nleu_3.0","Nomascus leucogenys",61853
+"82","oanatinus_gene_ensembl","Platypus","OANA5","Ornithorhynchus anatinus",9258
+"83","oaries_gene_ensembl","Sheep","Oar_v3.1","Ovis aries",9940
+"84","ocuniculus_gene_ensembl","Rabbit","OryCun2.0","Oryctolagus cuniculus",9986
+"85","odegus_gene_ensembl","Degu","OctDeg1.0","Octodon degus",10160
+"86","ogarnettii_gene_ensembl","Bushbaby","OtoGar3","Otolemur garnettii",30611
+"87","olatipes_gene_ensembl","Japanese medaka HdrR","ASM223467v1","Oryzias latipes",8090
+"88","omelastigma_gene_ensembl","Indian medaka","Om_v0.7.RACA","Oryzias melastigma",30732
+"89","oniloticus_gene_ensembl","Tilapia","Orenil1.0","Oreochromis niloticus",8128
+"90","oprinceps_gene_ensembl","Pika","OchPri2.0-Ens","Ochotona princeps",9978
+"91","pabelii_gene_ensembl","Orangutan","PPYG2","Pongo abelii",9601
+"92","panubis_gene_ensembl","Olive baboon","Panu_3.0","Papio anubis",9555
+"93","pcapensis_gene_ensembl","Hyrax","proCap1","Procavia capensis",9813
+"94","pcinereus_gene_ensembl","Koala","phaCin_unsw_v4.1","Phascolarctos cinereus",38626
+"95","pcoquereli_gene_ensembl","Coquerel's sifaka","Pcoq_1.0","Propithecus coquereli",379532
+"96","pformosa_gene_ensembl","Amazon molly","Poecilia_formosa-5.1.2","Poecilia formosa",48698
+"97","pkingsleyae_gene_ensembl","Paramormyrops kingsleyae","PKINGS_0.1","Paramormyrops kingsleyae",1676925
+"98","platipinna_gene_ensembl","Sailfin molly","P_latipinna-1.0","Poecilia latipinna",48699
+"99","pmagnuspinnatus_gene_ensembl","Periophthalmus magnuspinnatus","PM.fa","Periophthalmus magnuspinnatus",409849
+"100","pmarinus_gene_ensembl","Lamprey","Pmarinus_7.0","Petromyzon marinus",7757
+"101","pmbairdii_gene_ensembl","Northern American deer mouse","HU_Pman_2.1","Peromyscus maniculatus bairdii",230844
+"102","pmexicana_gene_ensembl","Shortfin molly","P_mexicana-1.0","Poecilia mexicana",48701
+"103","pnattereri_gene_ensembl","Red-bellied piranha","Pygocentrus_nattereri-1.0.2","Pygocentrus nattereri",42514
+"104","pnyererei_gene_ensembl","Makobe Island cichlid","PunNye1.0","Pundamilia nyererei",303518
+"105","ppaniscus_gene_ensembl","Bonobo","panpan1.1","Pan paniscus",9597
+"106","ppardus_gene_ensembl","Leopard","PanPar1.0","Panthera pardus",9691
+"107","preticulata_gene_ensembl","Guppy","Guppy_female_1.0_MT","Poecilia reticulata",8081
+"108","psinensis_gene_ensembl","Chinese softshell turtle","PelSin_1.0","Pelodiscus sinensis",13735
+"109","ptaltaica_gene_ensembl","Tiger","PanTig1.0","Panthera tigris altaica",74533
+"110","ptroglodytes_gene_ensembl","Chimpanzee","Pan_tro_3.0","Pan troglodytes",9598
+"111","pvampyrus_gene_ensembl","Megabat","pteVam1","Pteropus vampyrus",132908
+"112","rbieti_gene_ensembl","Black snub-nosed monkey","ASM169854v1","Rhinopithecus bieti",61621
+"113","rnorvegicus_gene_ensembl","Rat","Rnor_6.0","Rattus norvegicus",10116
+"114","rroxellana_gene_ensembl","Golden snub-nosed monkey","Rrox_v1","Rhinopithecus roxellana",61622
+"115","saraneus_gene_ensembl","Shrew","sorAra1","Sorex araneus",42254
+"116","sbboliviensis_gene_ensembl","Bolivian squirrel monkey","SaiBol1.0","Saimiri boliviensis boliviensis",39432
+"117","sdumerili_gene_ensembl","Greater amberjack","Sdu_1.0","Seriola dumerili",41447
+"118","sformosus_gene_ensembl","Asian bonytongue","ASM162426v1","Scleropages formosus",113540
+"119","sharrisii_gene_ensembl","Tasmanian devil","Devil_ref v7.0","Sarcophilus harrisii",9305
+"120","sldorsalis_gene_ensembl","Yellowtail amberjack","Sedor1","Seriola lalandi dorsalis",1841481
+"121","smaximus_gene_ensembl","Turbot","ASM318616v1","Scophthalmus maximus",52904
+"122","spartitus_gene_ensembl","Bicolor damselfish","Stegastes_partitus-1.0.2","Stegastes partitus",144197
+"123","spunctatus_gene_ensembl","Tuatara","ASM311381v1","Sphenodon punctatus",8508
+"124","sscrofa_gene_ensembl","Pig","Sscrofa11.1","Sus scrofa",9823
+"125","tbelangeri_gene_ensembl","Tree Shrew","tupBel1","Tupaia belangeri",37347
+"126","tguttata_gene_ensembl","Zebra Finch","taeGut3.2.4","Taeniopygia guttata",59729
+"127","tnigroviridis_gene_ensembl","Tetraodon","TETRAODON 8.0","Tetraodon nigroviridis",99883
+"128","trubripes_gene_ensembl","Fugu","FUGU5","Takifugu rubripes",31033
+"129","ttruncatus_gene_ensembl","Dolphin","turTru1","Tursiops truncatus",9739
+"130","uamericanus_gene_ensembl","American black bear","ASM334442v1","Ursus americanus",9643
+"131","umaritimus_gene_ensembl","Polar bear","UrsMar_1.0","Ursus maritimus",29073
+"132","vpacos_gene_ensembl","Alpaca","vicPac1","Vicugna pacos",30538
+"133","vvulpes_gene_ensembl","Red fox","VulVul2.2","Vulpes vulpes",9627
+"134","xcouchianus_gene_ensembl","Monterrey platyfish","Xiphophorus_couchianus-4.0.1","Xiphophorus couchianus",32473
+"135","xmaculatus_gene_ensembl","Platyfish","X_maculatus-5.0-male","Xiphophorus maculatus",8083
+"136","xtropicalis_gene_ensembl","Tropical clawed frog","Xenopus_tropicalis_v9.1","Xenopus tropicalis",8364

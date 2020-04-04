@@ -1,0 +1,68 @@
+"","dataset","description","version","Taxon.ID"
+"1","achinensis_eg_gene","Actinidia chinensis","Red5_PS1_1.69.0",1590841
+"2","ahalleri_eg_gene","Arabidopsis halleri","Ahal2.2",63677
+"3","alyrata_eg_gene","Arabidopsis lyrata","v.1.0",81972
+"4","atauschii_eg_gene","Aegilops tauschii","Aet v4.0",200361
+"5","athaliana_eg_gene","Arabidopsis thaliana","TAIR10",3702
+"6","atrichopoda_eg_gene","Amborella trichopoda","AMTR1.0",13333
+"7","bdistachyon_eg_gene","Brachypodium distachyon","Brachypodium_distachyon_v3.0",15368
+"8","bnapus_eg_gene","Brassica napus","AST_PRJEB5043_v1",3708
+"9","boleracea_eg_gene","Brassica oleracea","BOL",109376
+"10","brapa_eg_gene","Brassica rapa","Brapa_1.0",3711
+"11","bvulgaris_eg_gene","Beta vulgaris","RefBeet-1.2.2",3555
+"12","cannuum_eg_gene","Capsicum annuum","ASM51225v2",4072
+"13","ccanephora_eg_gene","Coffea canephora","AUK_PRJEB4211_v1",49390
+"14","ccapsularis_eg_gene","Corchorus capsularis","CCACVL1_1.0",210143
+"15","ccardunculus_eg_gene","Cynara cardunculus","CcrdV1",59895
+"16","ccrispus_eg_gene","Chondrus crispus","ASM35022v2",2769
+"17","cmerolae_eg_gene","Cyanidioschyzon merolae","ASM9120v1",280699
+"18","creinhardtii_eg_gene","Chlamydomonas reinhardtii","Chlamydomonas_reinhardtii_v5.5",3055
+"19","csativus_eg_gene","Cucumis sativus","ASM407v2",3659
+"20","dcarota_eg_gene","Daucus carota","ASM162521v1",79200
+"21","drotundata_eg_gene","Dioscorea rotundata","TDr96_F1_Pseudo_Chromosome_v1.0",55577
+"22","etef_eg_gene","Eragrostis tef","ASM97063v1",110835
+"23","gmax_eg_gene","Glycine max","Glycine_max_v2.1",3847
+"24","graimondii_eg_gene","Gossypium raimondii","Graimondii2_0",29730
+"25","gsulphuraria_eg_gene","Galdieria sulphuraria","ASM34128v1",130081
+"26","hannuus_eg_gene","Helianthus annuus","HanXRQr1.0",4232
+"27","hvulgare_eg_gene","Hordeum vulgare","IBSC v2",112509
+"28","langustifolius_eg_gene","Lupinus angustifolius","LupAngTanjil_v1.0",3871
+"29","lperrieri_eg_gene","Leersia perrieri","Lperr_V1.4",77586
+"30","macuminata_eg_gene","Musa acuminata","ASM31385v1",214687
+"31","mesculenta_eg_gene","Manihot esculenta","Manihot esculenta v6",3983
+"32","mpolymorpha_eg_gene","Marchantia polymorpha","Marchanta_polymorpha_v1",3197
+"33","mtruncatula_eg_gene","Medicago truncatula","MedtrA17_4.0",3880
+"34","nattenuata_eg_gene","Nicotiana attenuata","NIATTr2",49451
+"35","obarthii_eg_gene","Oryza barthii","O.barthii_v1",65489
+"36","obrachyantha_eg_gene","Oryza brachyantha","Oryza_brachyantha.v1.4b",4533
+"37","oglaberrima_eg_gene","Oryza glaberrima","Oryza_glaberrima_V1",4538
+"38","oglumipatula_eg_gene","Oryza glumipatula","Oryza_glumaepatula_v1.5",40148
+"39","oindica_eg_gene","Oryza sativa Indica Group","ASM465v1",39946
+"40","olongistaminata_eg_gene","Oryza longistaminata","O_longistaminata_v1.0",4528
+"41","olucimarinus_eg_gene","Ostreococcus lucimarinus","ASM9206v1",436017
+"42","omeridionalis_eg_gene","Oryza meridionalis","Oryza_meridionalis_v1.3",40149
+"43","onivara_eg_gene","Oryza nivara","Oryza_nivara_v1.0",4536
+"44","opunctata_eg_gene","Oryza punctata","Oryza_punctata_v1.2",4537
+"45","orufipogon_eg_gene","Oryza rufipogon","OR_W1943",4529
+"46","osativa_eg_gene","Oryza sativa Japonica Group","IRGSP-1.0",39947
+"47","phfil2_eg_gene","Panicum hallii FIL2","PHallii_v3.1",206008
+"48","phhal2_eg_gene","Panicum hallii HAL2","PhalliiHAL_v2.1",1504633
+"49","ppatens_eg_gene","Physcomitrella patens","Phypa V3",3218
+"50","ppersica_eg_gene","Prunus persica","Prunus_persica_NCBIv2",3760
+"51","ptrichocarpa_eg_gene","Populus trichocarpa","Pop_tri_v3",3694
+"52","pvulgaris_eg_gene","Phaseolus vulgaris","PhaVulg1_0",3885
+"53","sbicolor_eg_gene","Sorghum bicolor","Sorghum_bicolor_NCBIv3",4558
+"54","sitalica_eg_gene","Setaria italica","Setaria_italica_v2.0",4555
+"55","slycopersicum_eg_gene","Solanum lycopersicum","SL3.0",4081
+"56","smoellendorffii_eg_gene","Selaginella moellendorffii","v1.0",88036
+"57","stuberosum_eg_gene","Solanum tuberosum","SolTub_3.0",4113
+"58","taestivum_eg_gene","Triticum aestivum","IWGSC",4565
+"59","tcacao_eg_gene","Theobroma cacao","Criollo_cocoa_genome_V2",3641
+"60","tdicoccoides_eg_gene","Triticum dicoccoides","WEWSeq v.1.0",85692
+"61","tpratense_eg_gene","Trifolium pratense","Trpr",57577
+"62","tturgidum_eg_gene","Triticum turgidum","svevo",4567
+"63","turartu_eg_gene","Triticum urartu","ASM34745v1",4572
+"64","vangularis_eg_gene","Vigna angularis","Vigan1.1",3914
+"65","vradiata_eg_gene","Vigna radiata","Vradiata_ver6",3916
+"66","vvinifera_eg_gene","Vitis vinifera","12X",29760
+"67","zmays_eg_gene","Zea mays","B73 RefGen_v4",4577

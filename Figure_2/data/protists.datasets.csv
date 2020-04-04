@@ -1,0 +1,34 @@
+"","dataset","description","version","Taxon.ID"
+"1","alaibachii_eg_gene","Albugo laibachii","ENA 1",890382
+"2","bnatans_eg_gene","Bigelowiella natans","Bigna1",753081
+"3","ddiscoideum_eg_gene","Dictyostelium discoideum","dicty_2.7",352472
+"4","ehistolytica_eg_gene","Entamoeba histolytica","JCVI-ESG2-1.0",294381
+"5","ehuxleyi_eg_gene","Emiliania huxleyi","Emiliana huxleyi CCMP1516 main genome assembly v1.0",280463
+"6","glamblia_eg_gene","Giardia lamblia","GL2",184922
+"7","gtheta_eg_gene","Guillardia theta CCMP2712","Guith1",905079
+"8","harabidopsidis_eg_gene","Hyaloperonospora arabidopsidis","HyaAraEmoy2_2.0",559515
+"9","lmajor_eg_gene","Leishmania major","ASM272v2",347515
+"10","paphanidermatum_eg_gene","Pythium aphanidermatum","pag1_scaffolds_v1",1223555
+"11","parrhenomanes_eg_gene","Pythium arrhenomanes","par_scaffolds_v1",1223556
+"12","pberghei_eg_gene","Plasmodium berghei","PBANKA01",5823
+"13","pchabaudi_eg_gene","Plasmodium chabaudi","PCHAS01",31271
+"14","pfalciparum_eg_gene","Plasmodium falciparum 3D7","ASM276v2",36329
+"15","pinfestans_eg_gene","Phytophthora infestans","ASM14294v1",403677
+"16","pirregulare_eg_gene","Pythium irregulare","pir_scaffolds_v1",1223557
+"17","piwayamai_eg_gene","Pythium iwayamai","piw_scaffolds_v1",1223558
+"18","pkernoviae_eg_gene","Phytophthora kernoviae","PhyKer238/432v1",1284355
+"19","pknowlesi_eg_gene","Plasmodium knowlesi","ASM635v1",5851
+"20","plateralis_eg_gene","Phytophthora lateralis","MPF4_v1.0",1254522
+"21","pmultistriata_eg_gene","Pseudo-nitzschia multistriata","ASM90066040v1",183589
+"22","pparasitica_eg_gene","Phytophthora parasitica","Phyt_para_P1569_V1",1317065
+"23","pramorum_eg_gene","Phytophthora ramorum","ASM14973v1",164328
+"24","psojae_eg_gene","Phytophthora sojae","P.sojae V3.0",67593
+"25","ptetraurelia_eg_gene","Paramecium tetraurelia","ASM16542v1",5888
+"26","ptricornutum_eg_gene","Phaeodactylum tricornutum","ASM15095v2",556484
+"27","pultimum_eg_gene","Pythium ultimum","pug",431595
+"28","pvexans_eg_gene","Pythium vexans","pve_scaffolds_v1",1223560
+"29","pvivax_eg_gene","Plasmodium vivax","ASM241v2",5855
+"30","tbrucei_eg_gene","Trypanosoma brucei","TryBru_Apr2005_chr11",5691
+"31","tgondii_eg_gene","Toxoplasma gondii ME49","TGA4",508771
+"32","tpseudonana_eg_gene","Thalassiosira pseudonana","ASM14940v2",296543
+"33","tthermophila_eg_gene","Tetrahymena thermophila","JCVI-TTA1-2.2",312017

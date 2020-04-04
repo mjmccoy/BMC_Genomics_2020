@@ -1,0 +1,57 @@
+"","dataset","description","version","Taxon.ID"
+"1","aclavatus_eg_gene","Aspergillus clavatus NRRL 1","ASM271v1",344612
+"2","aflavus_eg_gene","Aspergillus flavus NRRL3357","JCVI-afl1-v2.0",332952
+"3","afumigatus_eg_gene","Aspergillus fumigatus Af293","ASM265v1",330879
+"4","afumigatusa1163_eg_gene","Aspergillus fumigatus A1163","ASM15014v1",451804
+"5","agossypii_eg_gene","Ashbya gossypii","ASM9102v1",284811
+"6","anidulans_eg_gene","Aspergillus nidulans","ASM1142v1",227321
+"7","aniger_eg_gene","Aspergillus niger","ASM285v2",5061
+"8","aoryzae_eg_gene","Aspergillus oryzae RIB40","ASM18445v3",510516
+"9","aterreus_eg_gene","Aspergillus terreus NIH2624","ASM14961v1",341663
+"10","bbassiana_eg_gene","Beauveria bassiana","ASM168263v1",176275
+"11","bcinerea_eg_gene","Botrytis cinerea B05.10","ASM83294v1",332648
+"12","bgraminis_eg_gene","Blumeria graminis","EF2",546991
+"13","cgloeosporioides_eg_gene","Colletotrichum gloeosporioides","Colletotrichum gloeosporioides Nara gc-5",1213859
+"14","cgraminicola_eg_gene","Colletotrichum graminicola","C_graminicola_M1_001_V1",645133
+"15","chigginsianum_eg_gene","Colletotrichum higginsianum","ASM31379v2",80884
+"16","cneoformans_eg_gene","Cryptococcus neoformans var. neoformans JEC21","ASM9104v1",214684
+"17","corbiculare_eg_gene","Colletotrichum orbiculare","Corbiculare240422v01",1213857
+"18","dseptosporum_eg_gene","Dothistroma septosporum","Dothistroma septosporum NZE10 v1.0",675120
+"19","fculmorum_eg_gene","Fusarium culmorum UK99","EF 1",1318462
+"20","ffujikuroi_eg_gene","Fusarium fujikuroi","EF 1",5127
+"21","fgraminearum_eg_gene","Fusarium graminearum str. PH-1","RR 1",5518
+"22","foxysporum_eg_gene","Fusarium oxysporum","FO2",426428
+"23","fpseudograminearum_eg_gene","Fusarium pseudograminearum","FP7",1028729
+"24","fsolani_eg_gene","Fusarium solani","v2.0",660122
+"25","fverticillioides_eg_gene","Fusarium verticillioides","ASM14955v1",334819
+"26","ggraminis_eg_gene","Gaeumannomyces tritici R3-111a-1","Gae_graminis_V2",644352
+"27","kpastoris_eg_gene","Komagataella pastoris","ASM2700v1",644223
+"28","lmaculans_eg_gene","Leptosphaeria maculans","ASM23037v1",985895
+"29","mlaricipopulina_eg_gene","Melampsora larici-populina","v1.0",747676
+"30","moryzae_eg_gene","Magnaporthe oryzae","MG8",242507
+"31","mpoae_eg_gene","Magnaporthe poae","Mag_poae_ATCC_64411_V1",644358
+"32","mviolaceum_eg_gene","Microbotryum violaceum","M_violaceum_V1",683840
+"33","ncrassa_eg_gene","Neurospora crassa","NC12",367110
+"34","nfischeri_eg_gene","Aspergillus fischeri NRRL 181","ASM14964v1",331117
+"35","pgraminis_eg_gene","Puccinia graminis","ASM14992v1",418459
+"36","pgraminisug99_eg_gene","Puccinia graminis Ug99","v1",1040990
+"37","pnodorum_eg_gene","Phaeosphaeria nodorum","ASM14691v1",321614
+"38","pstriiformis_eg_gene","Puccinia striiformis f. sp. tritici PST-130 str. Race 130","PST-130_1.0",875184
+"39","pteres_eg_gene","Pyrenophora teres","PyrTer_1.0",861557
+"40","ptriticina_eg_gene","Puccinia triticina","ASM15152v1",630390
+"41","ptriticirepentis_eg_gene","Pyrenophora tritici-repentis Pt-1C-BFP","ASM14998v1",426418
+"42","scerevisiae_eg_gene","Saccharomyces cerevisiae","R64-1-1",559292
+"43","scryophilus_eg_gene","Schizosaccharomyces cryophilus","SCY4",653667
+"44","sjaponicus_eg_gene","Schizosaccharomyces japonicus","SJ5",402676
+"45","soctosporus_eg_gene","Schizosaccharomyces octosporus","SO6",483514
+"46","spombe_eg_gene","Schizosaccharomyces pombe","ASM294v2",284812
+"47","sreilianum_eg_gene","Sporisorium reilianum","ASM23024v1",999809
+"48","ssclerotiorum_eg_gene","Sclerotinia sclerotiorum","ASM14694v1",665079
+"49","tmelanosporum_eg_gene","Tuber melanosporum","ASM15164v1",656061
+"50","treesei_eg_gene","Trichoderma reesei","v2.0",431241
+"51","tvirens_eg_gene","Trichoderma virens","ASM17099v1",413071
+"52","umaydis_eg_gene","Ustilago maydis","Umaydis521_2.0",237631
+"53","vdahliae_eg_gene","Verticillium dahliae","ASM15067v2",498257
+"54","vdahliaejr2_eg_gene","Verticillium dahliae JR2","VDAG_JR2v.4.0",1202531
+"55","ylipolytica_eg_gene","Yarrowia lipolytica","ASM252v1",284591
+"56","ztritici_eg_gene","Zymoseptoria tritici","MG2",336722

@@ -1,0 +1,234 @@
+---
+title: "Figure S7"
+author: "Matt McCoy"
+date: "March 2, 2020"
+output: html_document
+---
+  
+Load libraries.
+```{r}
+library(biomaRt)
+library(ggplot2)
+library(reshape2)
+library(dplyr)
+library(ggridges)
+```
+
+Load functions.
+```{r}
+source("../code/get_attributes.R")
+source("../code/get_intron_exon_table.R")
+source("../code/get_ensembl.R")
+source("../code/get_species_intron_exon_table.R")
+```
+
+Load ensembl databases.
+```{r}
+chordata_ensembl <- get_ensembl("chordata")
+metazoa_ensembl <- get_ensembl("metazoa")
+plants_ensembl <- get_ensembl("plants")
+protists_ensembl <- get_ensembl("protists")
+fungi_ensembl <- get_ensembl("fungi")
+```
+
+Calculate protein-coding feature estimates in Plantae.
+```{r}
+# To obtain Taxon IDs, download species table from https://plants.ensembl.org/species.html.
+filename <- "../Figure_2/data/plants_species_table.csv"
+plants.species.conversion <- read.table(file = filename, header = TRUE, sep = ",")
+plants.datasets <- listDatasets(plants_ensembl) # list all available species
+filename2 <- "../Figure_2/data/plants.datasets.csv"
+if(!file.exists(filename2)){
+  plants.datasets$description <- gsub("\\ genes.*","", plants.datasets$description) # reformat names
+  plants.datasets$Taxon.ID <- plants.species.conversion$Taxon.ID[match(as.character(plants.datasets$description), as.character(plants.species.conversion$Name))] # match Taxon IDs
+  write.csv(plants.datasets, file = filename2)
+} else{
+  plants.datasets <- read.csv(file = filename2, sep = ",", header = TRUE, row.names = 1, stringsAsFactors = FALSE)
+}
+
+# some datasets changed since my last analysis. Screen them for only consistent ones:
+new_datasets <- listDatasets(mart = useMart(host = "plants.ensembl.org", biomart = "plants_mart"))
+plants.datasets <- plants.datasets[plants.datasets$dataset %in% new_datasets$dataset,]
+
+plants.species.table <- get_species_intron_exon_table(plants.datasets)
+```
+
+Now in Protista.
+```{r}
+# To obtain Taxon IDs, download species table from https://protists.ensembl.org/species.html.
+filename <- "../Figure_2/data/protists_species_table.csv"
+protists.species.conversion <- read.table(file = filename, header = TRUE, sep = ",")
+protists.datasets <- listDatasets(protists_ensembl) # list all available species
+filename2 <- "../Figure_2/data/protists.datasets.csv"
+if(!file.exists(filename2)){
+  protists.datasets$description <- gsub("\\ genes.*","", protists.datasets$description) # reformat names
+  protists.datasets$Taxon.ID <- protists.species.conversion$Taxon.ID[match(as.character(protists.datasets$description), as.character(protists.species.conversion$Name))] # match Taxon IDs
+  write.csv(protists.datasets, file = filename2)
+} else{
+  protists.datasets <- read.csv(file = filename2, sep = ",", header = TRUE, row.names = 1, stringsAsFactors = FALSE)
+}
+
+# some datasets changed since my last analysis. Screen them for only consistent ones:
+new_datasets <- listDatasets(mart = useMart(host = "protists.ensembl.org", biomart = "protists_mart"))
+protists.datasets <- protists.datasets[protists.datasets$dataset %in% new_datasets$dataset,]
+
+protists.species.table <- get_species_intron_exon_table(protists.datasets)
+```
+
+Now in Fungi.
+```{r}
+# To obtain Taxon IDs, download species table from http://fungi.ensembl.org/species.html.
+filename <- "../Figure_2/data/fungi_species_table.csv"
+fungi.species.conversion <- read.table(file = filename, header = TRUE, sep = ",")
+fungi.datasets <- listDatasets(fungi_ensembl) # list all available species
+filename2 <- "../Figure_2/data/fungi.datasets.csv"
+if(!file.exists(filename2)){
+  fungi.datasets$description <- gsub("\\ genes.*","", fungi.datasets$description) # reformat names
+  fungi.datasets$Taxon.ID <- fungi.species.conversion$Taxon.ID[match(as.character(fungi.datasets$description), as.character(fungi.species.conversion$Name))] # match Taxon IDs
+  write.csv(fungi.datasets, file = filename2)
+} else{
+  fungi.datasets <- read.csv(file = filename2, sep = ",", header = TRUE, row.names = 1, stringsAsFactors = FALSE)
+}
+
+# some datasets changed since my last analysis. Screen them for only consistent ones:
+new_datasets <- listDatasets(mart = useMart(host = "fungi.ensembl.org", biomart = "fungi_mart"))
+fungi.datasets <- fungi.datasets[fungi.datasets$dataset %in% new_datasets$dataset,]
+
+fungi.species.table <- get_species_intron_exon_table(fungi.datasets)
+```
+
+Now in Metazoa.
+```{r}
+# To obtain Taxon IDs, download species table from http://metazoa.ensembl.org/species.html.
+filename1 <- "../Figure_2/data/metazoa_species_table.csv"
+metazoa.species.conversion <- read.table(file = filename1, header = TRUE, sep = ",")
+metazoa.datasets <- listDatasets(metazoa_ensembl) # list all available species
+filename2 <- "../Figure_2/data/metazoa.datasets.csv"
+if(!file.exists(filename2)){
+  metazoa.datasets$description <- gsub("\\ genes.*","", metazoa.datasets$description) # reformat names
+  metazoa.datasets$Taxon.ID <- metazoa.species.conversion$Taxon.ID[match(as.character(metazoa.datasets$description), as.character(metazoa.species.conversion$Name))] # match Taxon IDs
+  write.csv(metazoa.datasets, file = filename2)
+} else{
+  metazoa.datasets <- read.csv(file = filename2, sep = ",", header = TRUE, row.names = 1, stringsAsFactors = FALSE)
+}
+
+# some datasets changed since my last analysis. Screen them for only consistent ones:
+new_datasets <- listDatasets(mart = useMart(host = "metazoa.ensembl.org", biomart = "metazoa_mart"))
+metazoa.datasets <- metazoa.datasets[metazoa.datasets$dataset %in% new_datasets$dataset,]
+
+metazoa.species.table <- get_species_intron_exon_table(metazoa.datasets)
+```
+
+Now in Chordata.
+```{r}
+# To obtain Taxon IDs, download species table from http://uswest.ensembl.org/info/about/species.html. I added some missing taxonomy information.
+filename1 <- "../Figure_2/data/chordata_species_table.csv"
+chordata.species.conversion <- read.csv(file = filename1, header = TRUE)
+chordata.datasets <- listDatasets(chordata_ensembl) # list all available species
+filename2 <- "../Figure_2/data/chordata.datasets.csv"
+if(!file.exists(filename2)){
+  chordata.datasets$description <- gsub("\\ genes.*","", chordata.datasets$description) # reformat names
+  # Remove non-chordates
+  chordata.datasets <- chordata.datasets[! chordata.datasets$dataset %in% c("celegans_gene_ensembl", "dmelanogaster_gene_ensembl", "scerevisiae_gene_ensembl"),]
+  # Remove duplicate hamster genome and male mole rat genome
+  chordata.datasets <- chordata.datasets[! chordata.datasets$dataset %in% c("cchok1gshd_gene_ensembl", "hmale_gene_ensembl"),]
+  # Match species names
+  chordata.datasets$species <- chordata.species.conversion$Scientific.name[match(as.character(chordata.datasets$description), as.character(chordata.species.conversion$Common.name))]
+  # Match remaining missing species names.
+  chordata.datasets$species[is.na(chordata.datasets$species)] <- chordata.species.conversion$Scientific.name[match(subset(chordata.datasets, is.na(species))$version, as.character(chordata.species.conversion$Ensembl.Assembly))]
+  chordata.datasets
+  # Match Taxon IDs
+  chordata.datasets$Taxon.ID <- chordata.species.conversion$Taxon.ID[match(as.character(chordata.datasets$species), as.character(chordata.species.conversion$Scientific.name))]
+  chordata.datasets[,-5] <- as.character(chordata.datasets[,-5])
+  write.csv(chordata.datasets, file = filename2)
+} else{
+  chordata.datasets <- read.csv(file = filename2, sep = ",", header = TRUE, row.names = 1, stringsAsFactors = FALSE)
+}
+
+# some datasets changed since my last analysis. Screen them for only consistent ones:
+new_datasets <- listDatasets(mart = useMart(biomart = "ensembl"))
+chordata.datasets <- chordata.datasets[chordata.datasets$dataset %in% new_datasets$dataset,]
+
+chordata.species.table <- get_species_intron_exon_table(chordata.datasets)
+```
+
+```{r}
+# Combine and compare across different clades.
+species.table <- rbind(plants.species.table, metazoa.species.table, chordata.species.table, fungi.species.table, protists.species.table)
+```
+
+Save data.
+```{r}
+# re-order clade factor levels
+species.table$clade = factor(species.table$clade,levels(species.table$clade)[c(4,5,1,2,3)])
+
+# rename columns
+names(species.table) <- c(
+  "Species",
+  "Median gene length",
+  "Median exon length",
+  "Median intron length",
+  "Median number of exons",
+  "Number of genes", 
+  "Clade", 
+  "Taxon.ID"
+)
+
+# save data
+write.csv(species.table, file = "./intron_exon_tables/clade_tables/species_intron-exon_table.csv")
+```
+
+Figure S7.
+```{r}
+g1 <- species.table %>%
+  melt(id.vars = c(
+    "Species", 
+    "Clade",
+    "Taxon.ID")) %>%
+  ggplot(aes(
+    x = value,
+    y = Clade,
+    fill = Clade)) +
+  geom_density_ridges(alpha = 0.3) +
+  theme_bw() +
+  scale_x_log10() + 
+  annotation_logticks(sides = "b") +
+  ylab("") +
+  xlab("") +
+  facet_grid(~variable, scales = "free")
+
+g2 <- species.table %>%
+  melt(id.vars = c(
+    "Species", 
+    "Clade",
+    "Taxon.ID")) %>%
+  ggplot(aes(
+    x = value,
+    y = Clade,
+    fill = Clade)) +
+  geom_density_ridges(alpha = 0.3) +
+  theme_bw() +
+  ylab("") +
+  xlab("") +
+  facet_grid(~variable, scales = "free")
+
+ggsave(
+  filename = "./plots/Figure S7. log-scale.pdf",
+  plot = g1,
+  device = "pdf",
+  width = 7,
+  height = 2,
+  scale = 2,
+  units = "in",
+  useDingbats = FALSE)
+
+ggsave(
+  filename = "./plots/Figure S7.pdf",
+  plot = g2,
+  device = "pdf",
+  width = 7,
+  height = 2,
+  scale = 2,
+  units = "in",
+  useDingbats = FALSE)
+```

@@ -1,0 +1,429 @@
+---
+title: "Figure S6"
+author: "Matt McCoy"
+date: "3/30/2020"
+output: html_document
+---
+
+Load libraries.
+```{r}
+library(ggplot2)
+library(dplyr)
+library(reshape2)
+library(Hmisc)
+library(gridExtra)
+```
+
+Load expression and gene annotation data.
+```{r}
+expression.files <- list.files(
+  path = "../public_data/expression_data/",
+  pattern = "results.tpms.tsv"
+)
+
+gene.list <- list()
+expression.list <- list()
+for (file in expression.files){
+  filepath <- paste(
+    "../public_data/expression_data/", 
+    file, 
+    sep = ""
+  )
+  expression.data <- read.table(
+    file = filepath, 
+    sep = "\t", 
+    header = T
+  )
+  expression.data$Gene.Name <- NULL
+  expression.data[is.na(expression.data)] <- 0
+  # qsmooth data
+  data_qs <- qsmooth(expression.data[-1], group_factor = 1:length(names(expression.data[-1])))
+  expression.data[-1] <- data_qs@qsmoothData
+  
+  expression.data <- melt(
+    data = expression.data, 
+    id.vars = c("Gene.ID")
+  )
+  expression.data$value[is.na(expression.data$value)] <- 0
+  species <- paste(
+    tolower(
+      substr(
+        x = file,
+        start = 1,
+        stop = 1
+      )
+    ),
+    strsplit(x = file, split = "_")[[1]][2],
+    sep = ""
+  )
+  # Retrieve gene architecture annotations
+  if(species %in% c("celegans", "zmays")){
+      gene.data <- readRDS(
+    file = paste(
+      "../Supplementary information/intron_exon_tables/",
+      species,
+      "_eg_gene_intron_exon.RData",
+      sep = ""
+    )
+  )
+  } else {
+    gene.data <- readRDS(
+      file = paste(
+      "../Supplementary information/intron_exon_tables/",
+      species,
+      "_gene_ensembl_intron_exon.RData",
+      sep = ""
+    )
+    )}
+  gene.list[[species]] <- gene.data
+  expression.list[[species]] <- expression.data
+}
+
+# Add Drosophila and Octopus datasets
+expression.list$obimaculoides <- {
+  fcounts <- readRDS("../public_data/expression_data/Obimaculoides/fcounts.RDS")
+  counts <- as.data.frame(fcounts$counts)
+  feature_lengths <- fcounts$annotation$Length[match(
+    rownames(counts),
+    fcounts$annotation$GeneID)]
+  tpm.func <- function(counts,len) {
+    x <- counts/len
+    return(t(t(x)*1e6/colSums(x)))
+  }
+  tpm <- tpm.func(counts, feature_lengths)
+  tpm <- as.data.frame(tpm)
+  rownames(tpm) <- rownames(counts)
+  SraRunTable <- read.table(
+    file = "../public_data/expression_data/Obimaculoides/SraRunTable.txt", 
+    sep = "\t", 
+    header = TRUE)
+  # rename samples based on tissue name
+  for (i in 1:nrow(SraRunTable)){
+    names(tpm)[grep(
+      pattern = SraRunTable$Run[i], 
+      x = names(tpm), 
+      value = F)] <- as.character(SraRunTable$tissue[i])
+  }
+  
+  group_factor <- data.frame(
+    tissue = unique(names(tpm)),
+    group_factor = 1:length(unique(names(tpm))))
+  
+  # qsmooth data
+  data_qs <- qsmooth(
+    object = tpm[-1],
+    group_factor = group_factor$group_factor[match(names(tpm)[-1], group_factor$tissue)])
+  tpm[-1] <- data_qs@qsmoothData
+  
+  melt(as.matrix(tpm)) %>%
+    select(
+      Gene.ID = Var1, 
+      variable = Var2, 
+      value = value)
+}
+
+expression.list$dmelanogaster <- {
+  fcounts <- readRDS("../public_data/expression_data/Dmelanogaster/fcounts.RDS")
+  counts <- as.data.frame(fcounts$counts)
+  feature_lengths <- fcounts$annotation$Length[match(
+    rownames(counts),
+    fcounts$annotation$GeneID)]
+  tpm.func <- function(counts,len) {
+    x <- counts/len
+    return(t(t(x)*1e6/colSums(x)))
+  }
+  tpm <- tpm.func(counts, feature_lengths)
+  tpm <- as.data.frame(tpm)
+  rownames(tpm) <- rownames(counts)
+  SraRunTable <- read.table(
+    file = "../public_data/expression_data/Dmelanogaster/SraRunTable.txt", 
+    sep = "\t", 
+    header = TRUE)
+  # rename samples based on tissue name
+  for (i in 1:nrow(SraRunTable)){
+    names(tpm)[grep(
+      pattern = SraRunTable$Run[i], 
+      x = names(tpm), 
+      value = F)] <- as.character(SraRunTable$Sample_Name[i])
+  }
+  
+  group_factor <- data.frame(
+    tissue = unique(names(tpm)),
+    group_factor = 1:length(unique(names(tpm))))
+  
+  # qsmooth data
+  data_qs <- qsmooth(
+    object = tpm[-1],
+    group_factor = group_factor$group_factor[match(names(tpm)[-1], group_factor$tissue)])
+  tpm[-1] <- data_qs@qsmoothData
+  
+  melt(as.matrix(tpm)) %>% 
+    select(
+      Gene.ID = Var1,
+      variable = Var2, 
+      value = value)
+}
+
+# Remove whole animal data from C. elegans
+expression.list$celegans <- subset(
+  x = expression.list$celegans,
+  !(variable %in% grep(
+    pattern = "organism",
+    x = variable,
+    value = T)))
+
+# Remove tissues with uncertain neuronal composition from O. bimaculoides
+expression.list$obimaculoides <- subset(
+  x = expression.list$obimaculoides,
+  !(variable %in% grep(
+    pattern = "skin|suckers",
+    x = variable,
+    value = T)))
+
+gene.list$obimaculoides <- readRDS(
+  file = "../Supplementary information/intron_exon_tables/obimaculoides_eg_gene_intron_exon.RData")
+gene.list$dmelanogaster <- readRDS(
+  file = "../Supplementary information/intron_exon_tables/dmelanogaster_eg_gene_intron_exon.RData")
+```
+
+Merge gene lengths with expression data.
+```{r}
+# Combine expression and gene annotation data.
+plot.data.list <- list()
+for (species in names(expression.list)){
+  plot.data.list[[species]] <- expression.list[[species]] %>%
+    mutate(
+      variable = ifelse(
+        variable %in% grep(
+          "brain|cerebellum|hypothalamus|CNS|NSM|neuron|nerve|optic|retina",
+          variable, 
+          value = T),
+        "neuronal",
+        as.character(variable))) %>%
+    group_by(variable, Gene.ID) %>%
+    summarise(value =  mean(value))
+  plot.data.list[[species]]$gene_length <- gene.list[[species]]$gene_length[match(
+    plot.data.list[[species]]$Gene.ID, 
+    gene.list[[species]]$ensembl_gene_id)]
+
+  plot.data.list[[species]]$Gene.ID <- as.character(plot.data.list[[species]]$Gene.ID)
+  plot.data.list[[species]]$species <- species
+}
+```
+
+Figure S6. Smooth-quantile-normalized gene expression conditional on gene length quantiles.
+```{r}
+plot_mean_cl <- do.call("rbind", plot.data.list) %>%
+  select(
+    Gene.ID,
+    gene_length,
+    variable,
+    value,
+    species) %>% 
+  filter(!is.na(gene_length)) %>%
+  mutate(
+    species = factor(
+      species,
+      levels = c(
+        "hsapiens",
+        "btaurus", 
+        "mdomestica",
+        "ggallus",
+        "acarolinensis",
+        "obimaculoides",
+        "dmelanogaster", 
+        "celegans",
+        "zmays"))) %>%
+  unique() %>%
+  na.omit() %>%
+  group_by(species) %>%
+  mutate(gene_cuts = cut_number(
+    x = gene_length,
+    n = 100,
+    labels = FALSE)) %>%
+  ggplot(aes(
+      x = gene_cuts,
+      y = value^(1/3),
+      col = ifelse(
+          variable %in% grep(
+            "neuronal",
+            variable, 
+            value = T),
+          "neuronal",
+          "non-neuronal"),
+      fill = ifelse(
+          variable %in% grep(
+            "neuronal",
+            variable, 
+            value = T),
+          "neuronal",
+          "non-neuronal"),
+      group = variable)) + 
+  stat_summary(geom = "ribbon", fun.data = mean_cl_normal, alpha = 0.2, aes(col = NULL)) +
+  stat_summary(geom = "point", size = 0.1) +
+  stat_summary(geom = "line") +
+  theme_bw() +
+  xlab("Gene length quantiles") +
+  ylab("Gene expression (Cube root TPM)") +
+  scale_color_manual(
+    name = "Tissue",
+    values = c(
+      "neuronal" = "red", 
+      "non-neuronal" = "grey")) +
+  scale_fill_manual(
+    name = "Tissue",
+    values = c(
+      "neuronal" = "red", 
+      "non-neuronal" = "grey")) +
+  theme(legend.position = "none") + 
+  ggtitle("Binned means") +
+  facet_grid(
+    rows = vars(species),
+    scales = "free")
+
+plot_loess <- do.call("rbind", plot.data.list) %>%
+  select(
+    Gene.ID,
+    gene_length,
+    variable,
+    value,
+    species) %>% 
+  filter(!is.na(gene_length)) %>%
+  mutate(
+    species = factor(
+      species,
+      levels = c(
+        "hsapiens",
+        "btaurus", 
+        "mdomestica",
+        "ggallus",
+        "acarolinensis",
+        "obimaculoides",
+        "dmelanogaster", 
+        "celegans",
+        "zmays"))) %>%
+  unique() %>%
+  na.omit() %>%
+  group_by(species) %>%
+  mutate(gene_cuts = cut_number(
+    x = gene_length,
+    n = 100,
+    labels = FALSE)) %>%
+  ggplot(aes(
+      x = gene_cuts, 
+      y = value^(1/3),
+      col = ifelse(
+          variable %in% grep(
+            "neuronal",
+            variable, 
+            value = T),
+          "neuronal",
+          "non-neuronal"),
+      fill = ifelse(
+          variable %in% grep(
+            "neuronal",
+            variable, 
+            value = T),
+          "neuronal",
+          "non-neuronal"),
+      group = variable)) + 
+  geom_smooth(se = TRUE, alpha = 0.05, method = "loess", span = 0.1) +
+  theme_bw() +
+  xlab("Gene length quantiles") +
+  ylab("Gene expression (Cube root TPM)") +
+  scale_color_manual(
+    name = "Tissue",
+    values = c(
+      "neuronal" = "red", 
+      "non-neuronal" = "grey")) +
+  scale_fill_manual(
+    name = "Tissue",
+    values = c(
+      "neuronal" = "red", 
+      "non-neuronal" = "grey")) +
+  theme(legend.position = "none") + 
+  ggtitle("LOESS") +
+  facet_grid(
+    rows = vars(species),
+    scales = "free")
+
+plot_gam <- do.call("rbind", plot.data.list) %>%
+  select(
+    Gene.ID,
+    gene_length,
+    variable,
+    value,
+    species) %>% 
+  filter(!is.na(gene_length)) %>%
+  mutate(
+    species = factor(
+      species,
+      levels = c(
+        "hsapiens",
+        "btaurus", 
+        "mdomestica",
+        "ggallus",
+        "acarolinensis",
+        "obimaculoides",
+        "dmelanogaster", 
+        "celegans",
+        "zmays"))) %>%
+  unique() %>%
+  na.omit() %>%
+  group_by(species) %>%
+  mutate(gene_cuts = cut_number(
+    x = gene_length,
+    n = 100,
+    labels = FALSE)) %>%
+  ggplot(aes(
+      x = gene_cuts, 
+      y = value^(1/3),
+      col = ifelse(
+          variable %in% grep(
+            "neuronal",
+            variable, 
+            value = T),
+          "neuronal",
+          "non-neuronal"),
+      fill = ifelse(
+          variable %in% grep(
+            "neuronal",
+            variable, 
+            value = T),
+          "neuronal",
+          "non-neuronal"),
+      group = variable)) + 
+  geom_smooth(se = TRUE, alpha = 0.05) +
+  theme_bw() +
+  xlab("Gene length quantiles") +
+  ylab("Gene expression (Cube root TPM)") +
+  scale_color_manual(
+    name = "Tissue",
+    values = c(
+      "neuronal" = "red", 
+      "non-neuronal" = "grey")) +
+  scale_fill_manual(
+    name = "Tissue",
+    values = c(
+      "neuronal" = "red", 
+      "non-neuronal" = "grey")) +
+  theme(legend.position = "none") + 
+  ggtitle("GAM") +
+  facet_grid(
+    rows = vars(species),
+    scales = "free")
+
+g <- arrangeGrob(grobs = list(plot_mean_cl, plot_loess, plot_gam), ncol = 3)
+
+
+ggsave(
+  filename = "./plots/Figure S6.pdf",
+  plot = g,
+  device = "pdf", 
+  width = 6,
+  height = 8,
+  scale = 2,
+  units = "in",
+  useDingbats = FALSE)
+```
+

@@ -1,0 +1,65 @@
+---
+title: "Figure S1"
+author: "Matt McCoy"
+date: "January 11, 2020"
+output: html_document
+---
+
+Load libraries.
+```{r}
+library(biomaRt)
+library(ggplot2)
+library(gggenes)
+```
+
+Load functions.
+```{r}
+source("../code/get_attributes.R")
+source("../code/get_gene_table.R")
+source("../code/get_ensembl.R")
+source("../code/get_gene_neighborhood.R")
+```
+
+Load ensembl databases.
+```{r}
+chordata_ensembl <- get_ensembl("chordata")
+metazoa_ensembl <- get_ensembl("metazoa")
+```
+
+Pull gene attributes for each species.
+```{r}
+# specify paramaters
+output_dir <- "./data/gene_tables/"
+
+# pull gene attributes for each species
+cele <- get_gene_table("celegans", "metazoa", simplified = F, output_dir = output_dir)
+dmel <- get_gene_table("dmelanogaster", "metazoa", simplified = F, output_dir = output_dir)
+mmus <- get_gene_table("mmusculus", "chordata", simplified = F, output_dir = output_dir)
+hsap <- get_gene_table("hsapiens", "chordata", simplified = F, output_dir = output_dir)
+
+# pull strand information
+cele_strand <- get_attributes(species = "celegans_eg_gene", "metazoa", filters = "biotype", values = "protein_coding", attributes = c("ensembl_gene_id", "strand"))
+dmel_strand <- get_attributes(species = "dmelanogaster_eg_gene", "metazoa", filters = "biotype", values = "protein_coding", attributes = c("ensembl_gene_id", "strand"))
+mmus_strand <- get_attributes(species = "mmusculus_gene_ensembl", "chordata", filters = "biotype", values = "protein_coding", attributes = c("ensembl_gene_id", "strand"))
+hsap_strand <- get_attributes(species = "hsapiens_gene_ensembl", "chordata", filters = "biotype", values = "protein_coding", attributes = c("ensembl_gene_id", "strand"))
+
+# merge tables
+cele <- merge(cele, cele_strand, by = "ensembl_gene_id")
+dmel <- merge(dmel, dmel_strand, by = "ensembl_gene_id")
+mmus <- merge(mmus, mmus_strand, by = "ensembl_gene_id")
+hsap <- merge(hsap, hsap_strand, by = "ensembl_gene_id")
+```
+
+Extract the genomic neighborhood surrounding NRXN1 orthologs in each species.
+```{r}
+region_length <- 8e6
+
+hsap_NRXN1 <- get_gene_neighborhood(hsap, "ENSG00000179915", region_length)
+mmus_Nrxn1 <- get_gene_neighborhood(mmus, "ENSMUSG00000024109", region_length)
+cele_nxn1 <- get_gene_neighborhood(cele, "WBGene00007799", region_length)
+dmel_nxn1 <- get_gene_neighborhood(dmel, "FBgn0038975", region_length)
+
+# merge tables and save data
+gene_table <- rbind(hsap_NRXN1, mmus_Nrxn1, cele_nxn1, dmel_nxn1)
+write.csv(gene_table, file = "./data/gene_lengths/NRXN1_loci.csv")
+```
