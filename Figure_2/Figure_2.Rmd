@@ -148,7 +148,7 @@ taxa <- getTaxonomy(species.table$Taxon.ID, 'accessionTaxa.sql')
 species.table <- merge(species.table, taxa, by = "species")
 # Fill in missing chordate information
 species.table$class <- as.character(species.table$class)
-species.table$class[species.table$species %in% subset(species.table, is.na(class) & clade == "Chordata")$species] <- c("Reptilia", "Myxini", "Reptilia", "Sarcopterygii", "Reptilia", "Hyperoartia", "Reptilia")
+species.table$class[species.table$species %in% subset(species.table, is.na(class) & clade == "Chordata")$species] <- c("Reptilia", "Reptilia")
 ```
 
 Figure 2A. species.table is used for the median long gene length. Timetree was used to generate newick tree. iTOL was used to generate plot.
