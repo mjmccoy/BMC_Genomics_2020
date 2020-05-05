@@ -16,10 +16,10 @@ library(ggridges)
 
 Load functions.
 ```{r}
-source("../code/get_attributes.R")
-source("../code/get_intron_exon_table.R")
-source("../code/get_ensembl.R")
-source("../code/get_species_intron_exon_table.R")
+source("../functions/get_attributes.R")
+source("../functions/get_intron_exon_table.R")
+source("../functions/get_ensembl.R")
+source("../functions/get_species_intron_exon_table.R")
 ```
 
 Load ensembl databases.

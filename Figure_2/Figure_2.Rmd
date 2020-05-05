@@ -22,10 +22,10 @@ library(RColorBrewer)
 
 Load functions.
 ```{r}
-source("../code/get_attributes.R")
-source("../code/get_gene_table.R")
-source("../code/get_ensembl.R")
-source("../code/get_species_table.R")
+source("../functions/get_attributes.R")
+source("../functions/get_gene_table.R")
+source("../functions/get_ensembl.R")
+source("../functions/get_species_table.R")
 ```
 
 Load ensembl databases.

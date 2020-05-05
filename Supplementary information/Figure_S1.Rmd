@@ -14,10 +14,10 @@ library(gggenes)
 
 Load functions.
 ```{r}
-source("../code/get_attributes.R")
-source("../code/get_gene_table.R")
-source("../code/get_ensembl.R")
-source("../code/get_gene_neighborhood.R")
+source("../functions/get_attributes.R")
+source("../functions/get_gene_table.R")
+source("../functions/get_ensembl.R")
+source("../functions/get_gene_neighborhood.R")
 ```
 
 Load ensembl databases.
@@ -29,7 +29,7 @@ metazoa_ensembl <- get_ensembl("metazoa")
 Pull gene attributes for each species.
 ```{r}
 # specify paramaters
-output_dir <- "./data/gene_tables/"
+output_dir <- "./gene_tables/"
 
 # pull gene attributes for each species
 cele <- get_gene_table("celegans", "metazoa", simplified = F, output_dir = output_dir)
